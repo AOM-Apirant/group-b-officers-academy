@@ -15,7 +15,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto text-center">
           {/* Main Title with Animation */}
           <div className="mb-8">
-            <h1 className="lg:text-6xl text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 mb-6 animate-fade-in-up">
+            <h1 className="lg:text-6xl text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 mb-6 animate-fade-in-up mt-10">
               WELCOME TO
             </h1>
             <h2 className="lg:text-5xl text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 animate-fade-in-up-delay">
@@ -31,7 +31,7 @@ const Home = () => {
           {/* Main Content Card */}
           <div className="bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/20 lg:p-8 p-4 max-w-5xl mx-auto mb-12 animate-fade-in-up-delay-3">
             <div className="text-center mb-8">
-              <div className="inline-block text-6xl mb-6 animate-bounce">
+              <div className="inline-block lg:text-6xl text-4xl mb-6 animate-bounce">
                 🌟
               </div>
               <h3 className="lg:text-4xl text-2xl font-bold text-white mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text">

@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   description: "Group B Officers Academy is a platform for officers to learn and grow.",
   icons: {
     icon: "/favicon.ico",
+    shortcut: "/logo.jpg",
+    apple: "/logo.jpg",
   },
   openGraph: {
     title: "Group B Officers Academy",
