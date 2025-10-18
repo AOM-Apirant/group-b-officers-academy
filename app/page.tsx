@@ -32,7 +32,7 @@ const Home = () => {
           {/* Main Content Card */}
           <div className="bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/20 lg:p-8 p-4 max-w-5xl mx-auto mb-12 animate-fade-in-up-delay-3">
             <div className="text-center mb-8">
-              <div className="inline-block lg:text-6xl text-4xl mb-6 animate-bounce">
+              <div className="inline-block lg:text-5xl text-3xl mb-6 mt-5  animate-bounce">
                 🌟
               </div>
               <h3 className="lg:text-4xl text-2xl font-bold text-white mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text">
