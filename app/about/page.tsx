@@ -25,7 +25,7 @@ const About = () => {
               ✨ About Us
             </span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight animate-fade-in">
+          <h1 className="lg:text-5xl text-3xl font-black text-white mb-6 leading-tight animate-fade-in">
             About Our Academy
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto font-medium leading-relaxed">
@@ -62,7 +62,7 @@ const About = () => {
                   🎓 Our Story
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mb-8 leading-tight">
+              <h2 className="lg:text-4xl text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mb-8 leading-tight">
                 GROUP B OFFICERS ACADEMY
               </h2>
               <p className="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed font-medium">
@@ -109,7 +109,7 @@ const About = () => {
                 💫 Our Purpose
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+            <h2 className="lg:text-5xl text-3xl font-black text-gray-900 mb-4">
               Mission & Vision
             </h2>
           </div>
@@ -169,10 +169,10 @@ const About = () => {
                 👨‍🏫 Our Expert
               </span>
             </div>
-            <h2 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
+            <h2 className="lg:text-5xl text-3xl font-black text-white mb-6 leading-tight">
               Meet Our Expert Instructor
             </h2>
-            <p className="text-xl md:text-2xl text-blue-200 font-medium">
+            <p className="lg:text-xl text-base md:text-2xl text-blue-200 font-medium">
               Learn from the best in the field
             </p>
           </div>
@@ -188,11 +188,11 @@ const About = () => {
                       <span className="text-7xl">👨‍🏫</span>
                     </div>
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-black text-white mb-3">
+                  <h3 className="lg:text-3xl text-2xl font-black text-white mb-3">
                     Sri. SREENIVASULU CHEVURU
                   </h3>
                   <div className="inline-block mb-8 px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full">
-                    <p className="text-xl font-black text-gray-900">
+                    <p className="lg:text-xl text-base font-black text-gray-900">
                       Senior Instructor, ZRTI/MLY/SC/SCR
                     </p>
                   </div>
@@ -227,7 +227,7 @@ const About = () => {
                 ⭐ Why Choose Us
               </span>
             </div>
-            <h2 className="text-4xl md:text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 mb-6 leading-tight">
+            <h2 className="lg:text-5xl text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 mb-6 leading-tight">
               What Sets Us Apart
             </h2>
             <p className="text-xl md:text-2xl text-gray-700 font-medium">

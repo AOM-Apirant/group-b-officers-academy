@@ -28,7 +28,7 @@ const Home = () => {
               </div>
             </div>
             <div className="space-y-6 animate-fade-in">
-              <h1 className="text-6xl md:text-7xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mb-6 leading-tight">
+              <h1 className="lg:text-6xl text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mb-6 leading-tight">
                 Welcome to
                 <span className="block mt-2 bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 bg-clip-text">Group B Officers Academy</span>
               </h1>
@@ -51,26 +51,26 @@ const Home = () => {
       </section>
 
       {/* Welcome Message Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-10 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-white to-blue-50"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 relative">
           <div className="relative bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 rounded-3xl p-1 shadow-2xl hover:shadow-blue-300/50 transition-all duration-500">
-            <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 md:p-14 text-white">
+            <div className="bg-white/10 backdrop-blur-xl rounded-3xl lg:p-8 p-4 text-white">
               <div className="text-center mb-10">
                 <div className="inline-block animate-bounce">
-                  <span className="text-6xl mb-6 block drop-shadow-lg">🌟</span>
+                  <span className="lg:text-6xl text-4xl mb-6 block drop-shadow-lg">🌟</span>
                 </div>
-                <h2 className="text-4xl md:text-5xl font-black mb-5 leading-tight tracking-tight">
-                  GOOD EVENING, AOM ASPIRANTS!
+                <h2 className="lg:text-4xl text-2xl md:text-5xl font-black mb-5 leading-tight tracking-tight">
+                  HELLO, AOM ASPIRANTS!
                 </h2>
                 <div className="inline-block px-6 py-3 bg-white/20 backdrop-blur-md rounded-full border border-white/30">
-                  <p className="text-xl font-semibold">
+                  <p className="lg:text-xl text-base font-semibold">
                     From GROUP &apos;B&apos; OFFICERS ACADEMY
                   </p>
                 </div>
               </div>
               
-              <div className="max-w-4xl mx-auto text-lg md:text-xl leading-relaxed space-y-6">
+              <div className="max-w-4xl mx-auto lg:text-lg text-base md:text-xl leading-relaxed space-y-6">
                 <p className="text-white/95 font-medium">
                   It&apos;s wonderful to see such a large number of dedicated aspirants preparing for the AOM LDCE Examination.
                 </p>
@@ -81,7 +81,7 @@ const Home = () => {
                 
                 <div className="relative mt-10">
                   <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl blur-xl opacity-30"></div>
-                  <div className="relative bg-white backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-white/20 transform hover:scale-105 transition-transform duration-300">
+                  <div className="relative bg-white backdrop-blur-sm rounded-2xl lg:p-8 p-4 shadow-lg border border-white/20 transform hover:scale-105 transition-transform duration-300">
                     <div className="flex items-center justify-center">
                       <div className="text-center">
                         <div className="mb-3">
@@ -112,15 +112,15 @@ const Home = () => {
                 Our Features
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
+            <h2 className="lg:text-4xl text-2xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
               Why Choose Our Academy?
             </h2>
-            <p className="text-xl md:text-2xl text-gray-600 font-medium">
+            <p className="lg:text-xl text-base md:text-2xl text-gray-600 font-medium">
               Comprehensive preparation for your success
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 md:gap-10">
+          <div className="grid lg:grid-cols-3 grid-cols-1 gap-8 md:gap-10">
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
               <div className="relative bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-blue-200 transform hover:-translate-y-2">
@@ -193,10 +193,10 @@ const Home = () => {
                 Start Today
               </span>
             </div>
-            <h2 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
+            <h2 className="lg:text-4xl text-2xl md:text-6xl font-black text-white mb-6 leading-tight">
               Ready to Start Your Journey?
             </h2>
-            <p className="text-xl md:text-2xl text-blue-100 mb-10 font-medium leading-relaxed">
+            <p className="lg:text-xl text-base md:text-2xl text-blue-100 mb-10 font-medium leading-relaxed">
               Join thousands of successful officers who started their journey with us.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 justify-center">

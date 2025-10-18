@@ -61,16 +61,16 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
-              <Link href="/" className="block px-3 py-2 text-gray-700 hover:text-blue-600">
+              <Link href="/" className="block px-3 py-2 text-gray-700 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>
                 Home
               </Link>
-              <Link href="/about" className="block px-3 py-2 text-gray-700 hover:text-blue-600">
+              <Link href="/about" className="block px-3 py-2 text-gray-700 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>
                 About
               </Link>
-              <Link href="/contact" className="block px-3 py-2 text-gray-700 hover:text-blue-600">
+              <Link href="/contact" className="block px-3 py-2 text-gray-700 hover:text-blue-600" onClick={() => setIsMenuOpen(false)}>
                 Contact
               </Link>
-              <Link href="/login" className="block px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+              <Link href="/login" className="block px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700" onClick={() => setIsMenuOpen(false)}>
                 Login
               </Link>
             </div>
