@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Home = () => {
@@ -204,9 +205,9 @@ const Home = () => {
             <div>
               <h4 className="text-xl font-bold text-white mb-4">Quick Links</h4>
               <ul className="space-y-2">
-                <li><a href="/about" className="text-blue-200 hover:text-white transition-colors">About Us</a></li>
-                <li><a href="/contact" className="text-blue-200 hover:text-white transition-colors">Contact</a></li>
-                <li><a href="/login" className="text-blue-200 hover:text-white transition-colors">Login</a></li>
+                <li><Link href="/about" className="text-blue-200 hover:text-white transition-colors">About Us</Link></li>
+                <li><Link href="/contact" className="text-blue-200 hover:text-white transition-colors">Contact</Link></li>
+                <li><Link href="/login" className="text-blue-200 hover:text-white transition-colors">Login</Link></li>
               </ul>
             </div>
             
@@ -221,7 +222,7 @@ const Home = () => {
           </div>
           
           <div className="border-t border-white/10 mt-12 pt-8 text-center">
-            <p className="text-blue-200">© 2024 Group B Officers Academy. All rights reserved.</p>
+            <p className="text-blue-200">© 2025 Group B Officers Academy. All rights reserved.</p>
           </div>
         </div>
       </footer>

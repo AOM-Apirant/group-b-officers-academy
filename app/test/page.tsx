@@ -91,7 +91,7 @@ const TestPage = () => {
               <li>Open Browser DevTools (F12)</li>
               <li>Go to Console tab</li>
               <li>Click buttons above</li>
-              <li>Check console for "Navigating to:" messages</li>
+              <li>Check console for &quot;Navigating to:&quot; messages</li>
               <li>Verify URL changes in address bar</li>
               <li>Verify page content updates</li>
             </ol>
@@ -101,7 +101,7 @@ const TestPage = () => {
             <h2 className="text-xl font-semibold mb-4">Expected Behavior:</h2>
             <ul className="list-disc list-inside space-y-2">
               <li>✅ URL should change without page reload</li>
-              <li>✅ Console should show "Navigating to:" messages</li>
+              <li>✅ Console should show &quot;Navigating to:&quot; messages</li>
               <li>✅ Page content should update smoothly</li>
               <li>✅ No errors in console</li>
             </ul>
