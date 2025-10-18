@@ -1,211 +1,303 @@
 import React from 'react'
+import Image from 'next/image'
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 right-10 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div className="absolute top-60 left-10 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-20 left-1/2 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
       </div>
 
       {/* Hero Section */}
-      <section className="relative z-10 min-h-screen flex items-center justify-center px-2 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          {/* Main Title with Animation */}
-          <div className="mb-8">
-            <h1 className="lg:text-6xl text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 mb-6 animate-fade-in-up">
-              ABOUT OUR
-            </h1>
-            <h2 className="lg:text-5xl text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 animate-fade-in-up-delay">
-              GROUP B OFFICERS ACADEMY
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700"></div>
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-72 h-72 bg-white rounded-full filter blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-0 w-72 h-72 bg-pink-300 rounded-full filter blur-3xl animate-pulse animation-delay-2000"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="inline-block mb-6">
+            <span className="px-6 py-3 bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold rounded-full text-sm uppercase tracking-wider shadow-lg">
+              ✨ About Us
+            </span>
+          </div>
+          <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight animate-fade-in">
+            About Our Academy
+          </h1>
+          <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto font-medium leading-relaxed">
+            Dedicated to excellence in preparing officers for <span className="text-yellow-300 font-bold">AOM LDCE examinations</span>
+          </p>
+          <div className="mt-10">
+            <div className="inline-flex items-center gap-8 text-white">
+              <div className="text-center">
+                <p className="text-4xl font-black">10+</p>
+                <p className="text-sm text-blue-200">Years</p>
+              </div>
+              <div className="w-px h-12 bg-white/30"></div>
+              <div className="text-center">
+                <p className="text-4xl font-black">1000+</p>
+                <p className="text-sm text-blue-200">Students</p>
+              </div>
+              <div className="w-px h-12 bg-white/30"></div>
+              <div className="text-center">
+                <p className="text-4xl font-black">95%</p>
+                <p className="text-sm text-blue-200">Success</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Academy Overview */}
+      <section className="relative py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="relative z-10">
+              <div className="inline-block mb-4">
+                <span className="px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 font-bold rounded-full text-sm uppercase tracking-wide">
+                  🎓 Our Story
+                </span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mb-8 leading-tight">
+                GROUP B OFFICERS ACADEMY
+              </h2>
+              <p className="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed font-medium">
+                We are a <span className="text-blue-600 font-bold">premier training institution</span> specializing in preparing dedicated aspirants for the AOM LDCE Examination. Our academy is committed to providing comprehensive, high-quality education that empowers students to achieve their career goals in the Indian Railways.
+              </p>
+              <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed font-medium">
+                With years of experience and a proven track record, we have successfully guided numerous students through their preparation journey, helping them secure their desired positions in <span className="text-purple-600 font-bold">Group B officer roles</span>.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <div className="group relative overflow-hidden bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                  <span className="relative z-10">Expert Instructors</span>
+                </div>
+                <div className="group relative overflow-hidden bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                  <span className="relative z-10">Interactive Learning</span>
+                </div>
+                <div className="group relative overflow-hidden bg-gradient-to-r from-purple-500 to-pink-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                  <span className="relative z-10">Proven Results</span>
+                </div>
+              </div>
+            </div>
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-600 rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+              <div className="relative">
+                <Image
+                  src="/logo.jpg"
+                  alt="Group B Officers Academy"
+                  width={500}
+                  height={500}
+                  className="rounded-3xl shadow-2xl ring-4 ring-white group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50 to-purple-50"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4">
+              <span className="px-4 py-2 bg-gradient-to-r from-orange-100 to-red-100 text-orange-700 font-bold rounded-full text-sm uppercase tracking-wide">
+                💫 Our Purpose
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+              Mission & Vision
             </h2>
           </div>
-
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in-up-delay-2">
-            Empowering Railway Officers Through Excellence in Training and Development Since 2014
-          </p>
-        </div>
-      </section>
-
-      {/* Mission & Vision Section */}
-      <section className="relative z-10 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in-up">
-              <h2 className="lg:text-5xl text-3xl font-bold text-white mb-6">Our Mission</h2>
-              <p className="text-lg md:text-xl text-blue-100 leading-relaxed mb-6">
-                To provide comprehensive, high-quality training programs that prepare railway officers for 
-                successful careers in Group B positions through innovative teaching methods, expert guidance, 
-                and practical experience.
-              </p>
-              <p className="text-lg md:text-xl text-blue-100 leading-relaxed">
-                We are committed to fostering excellence, integrity, and leadership qualities in every 
-                officer who passes through our academy.
-              </p>
+          
+          <div className="grid md:grid-cols-2 gap-10">
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+              <div className="relative bg-white backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-gray-100 hover:border-blue-300 transition-all duration-500 transform hover:-translate-y-2">
+                <div className="text-center">
+                  <div className="relative mb-8">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-2xl blur-lg opacity-50"></div>
+                    <div className="relative w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto shadow-xl">
+                      <span className="text-5xl">🎯</span>
+                    </div>
+                  </div>
+                  <h3 className="text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 mb-6">Our Mission</h3>
+                  <p className="text-lg text-gray-700 leading-relaxed font-medium">
+                    To provide <span className="text-blue-600 font-bold">exceptional training and guidance</span> to AOM aspirants, ensuring they are well-prepared for the LDCE examination through comprehensive study materials, expert instruction, and regular practice sessions.
+                  </p>
+                </div>
+              </div>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/20 p-8 animate-fade-in-up-delay">
-              <h3 className="text-3xl font-bold text-white mb-6 text-center">Our Vision</h3>
-              <div className="text-center">
-                <div className="text-6xl mb-4">🚂</div>
-                <p className="text-lg text-blue-100 leading-relaxed">
-                  To be the premier training institution for railway officers, recognized nationally 
-                  for producing competent, ethical, and innovative leaders who drive excellence in 
-                  Indian Railways operations.
-                </p>
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-400 to-pink-500 rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+              <div className="relative bg-white backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-gray-100 hover:border-purple-300 transition-all duration-500 transform hover:-translate-y-2">
+                <div className="text-center">
+                  <div className="relative mb-8">
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl blur-lg opacity-50"></div>
+                    <div className="relative w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto shadow-xl">
+                      <span className="text-5xl">🌟</span>
+                    </div>
+                  </div>
+                  <h3 className="text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 mb-6">Our Vision</h3>
+                  <p className="text-lg text-gray-700 leading-relaxed font-medium">
+                    To be the <span className="text-purple-600 font-bold">leading academy</span> for Group B officer preparation, recognized for our excellence in education and our commitment to student success in the Indian Railways sector.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Academy History Section */}
-      <section className="relative z-10 py-20 bg-black/20 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Instructor Section */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900"></div>
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 w-96 h-96 bg-blue-400 rounded-full filter blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-400 rounded-full filter blur-3xl animate-pulse animation-delay-2000"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="lg:text-5xl text-3xl font-bold text-white mb-4">Our Journey</h2>
-            <p className="text-xl text-blue-200">A Decade of Excellence in Railway Officer Training</p>
+            <div className="inline-block mb-4">
+              <span className="px-6 py-3 bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold rounded-full text-sm uppercase tracking-wider shadow-lg">
+                👨‍🏫 Our Expert
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
+              Meet Our Expert Instructor
+            </h2>
+            <p className="text-xl md:text-2xl text-blue-200 font-medium">
+              Learn from the best in the field
+            </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
-              <div className="text-5xl font-bold text-yellow-400 mb-2">2014</div>
-              <h3 className="text-xl font-bold text-white mb-2">Academy Founded</h3>
-              <p className="text-blue-200">Started with a vision to transform railway officer training</p>
-            </div>
-            
-            <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
-              <div className="text-5xl font-bold text-yellow-400 mb-2">500+</div>
-              <h3 className="text-xl font-bold text-white mb-2">Officers Trained</h3>
-              <p className="text-blue-200">Successfully trained officers across various railway zones</p>
-            </div>
-            
-            <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
-              <div className="text-5xl font-bold text-yellow-400 mb-2">95%</div>
-              <h3 className="text-xl font-bold text-white mb-2">Success Rate</h3>
-              <p className="text-blue-200">Outstanding track record in AOM LDCE examinations</p>
+          <div className="max-w-5xl mx-auto">
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-500 rounded-3xl blur-2xl opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
+              <div className="relative bg-white/10 backdrop-blur-2xl rounded-3xl p-10 md:p-16 border border-white/20 shadow-2xl">
+                <div className="text-center">
+                  <div className="relative mb-8 inline-block">
+                    <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full blur-2xl opacity-60 animate-pulse"></div>
+                    <div className="relative w-40 h-40 bg-gradient-to-br from-yellow-400 via-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto shadow-2xl ring-4 ring-white/30">
+                      <span className="text-7xl">👨‍🏫</span>
+                    </div>
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-black text-white mb-3">
+                    Sri. SREENIVASULU CHEVURU
+                  </h3>
+                  <div className="inline-block mb-8 px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full">
+                    <p className="text-xl font-black text-gray-900">
+                      Senior Instructor, ZRTI/MLY/SC/SCR
+                    </p>
+                  </div>
+                  <p className="text-lg md:text-xl text-white/95 leading-relaxed max-w-3xl mx-auto font-medium mb-10">
+                    With extensive experience in railway operations and training, Sri. SREENIVASULU CHEVURU brings <span className="text-yellow-300 font-bold">unparalleled expertise</span> to our academy. His deep understanding of the AOM LDCE examination patterns and his proven teaching methods have helped <span className="text-orange-300 font-bold">countless students achieve their goals</span>.
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-4">
+                    <div className="group/badge relative overflow-hidden bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-110">
+                      Expert in Railway Operations
+                    </div>
+                    <div className="group/badge relative overflow-hidden bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-110">
+                      Proven Track Record
+                    </div>
+                    <div className="group/badge relative overflow-hidden bg-gradient-to-r from-purple-500 to-pink-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-110">
+                      Student-Focused Approach
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="relative z-10 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Academy Features */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-indigo-50 to-purple-100"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="lg:text-5xl text-3xl font-bold text-white mb-4">Meet Our Expert Team</h2>
-            <p className="text-xl text-blue-200">Experienced Professionals Dedicated to Your Success</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="group text-center p-8 bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
-              <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform duration-300">
-                <span className="text-3xl">👨‍🏫</span>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Sri. SREENIVASULU CHEVURU</h3>
-              <p className="text-blue-300 text-lg mb-4">Senior Instructor</p>
-              <p className="text-blue-200 text-sm">ZRTI/MLY/SC/SCR</p>
-              <p className="text-blue-100 text-sm mt-4">
-                With over 15 years of experience in railway operations and training, 
-                Sri. Sreenivasulu brings unparalleled expertise to our academy.
-              </p>
+            <div className="inline-block mb-4">
+              <span className="px-4 py-2 bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 font-bold rounded-full text-sm uppercase tracking-wide">
+                ⭐ Why Choose Us
+              </span>
             </div>
-            
-            <div className="group text-center p-8 bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
-              <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform duration-300">
-                <span className="text-3xl">👩‍💼</span>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Dr. Priya Sharma</h3>
-              <p className="text-blue-300 text-lg mb-4">Training Coordinator</p>
-              <p className="text-blue-200 text-sm">Educational Excellence</p>
-              <p className="text-blue-100 text-sm mt-4">
-                Specialized in curriculum development and student assessment, 
-                ensuring comprehensive preparation for all aspirants.
-              </p>
-            </div>
-            
-            <div className="group text-center p-8 bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2">
-              <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform duration-300">
-                <span className="text-3xl">👨‍💻</span>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Rajesh Kumar</h3>
-              <p className="text-blue-300 text-lg mb-4">Technical Specialist</p>
-              <p className="text-blue-200 text-sm">Digital Learning</p>
-              <p className="text-blue-100 text-sm mt-4">
-                Expert in online learning platforms and interactive teaching methods, 
-                making complex railway concepts easy to understand.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Values Section */}
-      <section className="relative z-10 py-20 bg-black/20 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="lg:text-5xl text-3xl font-bold text-white mb-4">Our Core Values</h2>
-            <p className="text-xl text-blue-200">Principles That Guide Everything We Do</p>
+            <h2 className="text-4xl md:text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 mb-6 leading-tight">
+              What Sets Us Apart
+            </h2>
+            <p className="text-xl md:text-2xl text-gray-700 font-medium">
+              Our unique approach to AOM preparation
+            </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🎯</span>
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-2xl blur-lg opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
+              <div className="relative bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-blue-300 transform hover:-translate-y-3">
+                <div className="text-center">
+                  <div className="relative mb-6">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-xl blur-md opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
+                    <div className="relative w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mx-auto shadow-lg">
+                      <span className="text-4xl">📖</span>
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-black text-gray-900 mb-3">Comprehensive Study Material</h3>
+                  <p className="text-gray-600 leading-relaxed font-medium">Well-structured curriculum covering all aspects of the examination</p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Excellence</h3>
-              <p className="text-blue-200 text-sm">Committed to delivering the highest quality training</p>
             </div>
             
-            <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🤝</span>
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl blur-lg opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
+              <div className="relative bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-green-300 transform hover:-translate-y-3">
+                <div className="text-center">
+                  <div className="relative mb-6">
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl blur-md opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
+                    <div className="relative w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mx-auto shadow-lg">
+                      <span className="text-4xl">💻</span>
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-black text-gray-900 mb-3">Live Interactive Classes</h3>
+                  <p className="text-gray-600 leading-relaxed font-medium">Real-time learning through Zoom sessions with expert instructors</p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Integrity</h3>
-              <p className="text-blue-200 text-sm">Maintaining the highest ethical standards</p>
             </div>
             
-            <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">💡</span>
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl blur-lg opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
+              <div className="relative bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-purple-300 transform hover:-translate-y-3">
+                <div className="text-center">
+                  <div className="relative mb-6">
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl blur-md opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
+                    <div className="relative w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto shadow-lg">
+                      <span className="text-4xl">📝</span>
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-black text-gray-900 mb-3">Regular Practice Tests</h3>
+                  <p className="text-gray-600 leading-relaxed font-medium">Mock tests and assessments to track your progress</p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Innovation</h3>
-              <p className="text-blue-200 text-sm">Embracing new methods and technologies</p>
             </div>
             
-            <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🌟</span>
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl blur-lg opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
+              <div className="relative bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-orange-300 transform hover:-translate-y-3">
+                <div className="text-center">
+                  <div className="relative mb-6">
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-400 to-red-500 rounded-xl blur-md opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
+                    <div className="relative w-20 h-20 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mx-auto shadow-lg">
+                      <span className="text-4xl">🤝</span>
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-black text-gray-900 mb-3">Personal Mentorship</h3>
+                  <p className="text-gray-600 leading-relaxed font-medium">Individual guidance and support throughout your journey</p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Leadership</h3>
-              <p className="text-blue-200 text-sm">Developing future railway leaders</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="relative z-10 py-20">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/20 p-8 md:p-12">
-            <h2 className="lg:text-4xl text-2xl font-bold text-white mb-6">
-              Ready to Start Your Journey?
-            </h2>
-            <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
-              Join hundreds of successful officers who have transformed their careers through our 
-              comprehensive training programs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xl font-bold rounded-2xl shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1">
-                <span className="relative z-10">Enroll Now</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-indigo-700 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </button>
-              <button className="group relative px-8 py-4 bg-white/10 backdrop-blur-lg text-white text-xl font-bold rounded-2xl border-2 border-white/30 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1">
-                <span className="relative z-10">Contact Us</span>
-              </button>
             </div>
           </div>
         </div>
@@ -213,4 +305,5 @@ const About = () => {
     </div>
   )
 }
+
 export default About
