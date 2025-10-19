@@ -79,20 +79,31 @@ const Home = () => {
                   To instill seriousness and focus among all participants and to ensure effective preparation through interactive Zoom classes and regular practice tests, an Intensive Crash Course has been specially designed under the able guidance of:
                 </p>
                 
-                <div className="relative mt-10">
-                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl blur-xl opacity-30"></div>
-                  <div className="relative bg-white backdrop-blur-sm rounded-2xl lg:p-8 p-4 shadow-lg border border-white/20 transform hover:scale-105 transition-transform duration-300">
+                <div className="relative mt-12">
+                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 rounded-2xl blur-2xl opacity-40"></div>
+                  <div className="relative bg-white/80 backdrop-blur-2xl rounded-xl lg:p-12 p-6 shadow-2xl border border-yellow-100/40 transform hover:scale-105 transition-transform duration-400">
                     <div className="flex items-center justify-center">
                       <div className="text-center">
-                        <div className="mb-3">
-                          <span className="text-4xl">👨‍🏫</span>
+                        <div className="mb-4">
+                          <p className="text-lg sm:text-xl font-medium text-gray-700/80">
+                            Experience the <span className="font-bold text-orange-600">Power of Mentorship</span> under the remarkable guidance of our beloved
+                          </p>
                         </div>
-                        <p className="font-black text-2xl md:text-3xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 mb-2">
-                          Sri. SREENIVASULU CHEVURU
+                        <p className="font-black lg:text-3xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-indigo-500 to-purple-700 mb-3 drop-shadow-lg tracking-tight animate-pulse">
+                          Sri SREENIVASULU CHEVURU
                         </p>
-                        <p className="text-lg md:text-xl text-gray-700 font-semibold">
-                          Sr. Instructor, ZRTI/MLY/SC/SCR
+                        <p className="lg:text-xl text-base font-semibold text-gray-800 flex items-center justify-center gap-2">
+                          Senior Instructor, ZRTI/MLY/SC/SCR
                         </p>
+                        <p className="mt-5 text-base md:text-lg text-slate-700 max-w-xl mx-auto italic">
+                          Unlock your fullest potential guided by inspired teaching, wisdom, and dedication.<br/>
+                          Embark on a transformative learning journey towards your dream of success in the AOM LDCE Examination!
+                        </p>
+                        <div className="flex justify-center mt-5">
+                          <span className="inline-block rounded-full bg-yellow-300/80 px-5 py-2 text-yellow-900 font-bold text-lg shadow-md border border-yellow-200 tracking-wide animate-fade-in-up">
+                            Elevate. Empower. Excel.
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
