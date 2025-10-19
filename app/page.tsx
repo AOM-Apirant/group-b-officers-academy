@@ -63,7 +63,7 @@ const Home = () => {
                 <h2 className="lg:text-4xl text-2xl md:text-5xl font-black mb-5 leading-tight tracking-tight">
                   HELLO, AOM ASPIRANTS!
                 </h2>
-                <div className="inline-block px-6 py-3 bg-white/20 backdrop-blur-md rounded-full border border-white/30">
+                <div className="inline-block lg:px-6 px-4 lg:py-3 py-2 bg-white/20 backdrop-blur-md rounded-full border border-white/30">
                   <p className="lg:text-xl text-base font-semibold">
                     From GROUP &apos;B&apos; OFFICERS ACADEMY
                   </p>
