@@ -12,7 +12,7 @@ const Home = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-16 px-4 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <div className="mb-8 group">
@@ -21,18 +21,18 @@ const Home = () => {
                 <Image
                   src="/logo.jpg"
                   alt="Group B Officers Academy"
-                  width={220}
-                  height={220}
+                  width={150}
+                  height={150}
                   className="relative mx-auto rounded-full shadow-2xl ring-4 ring-white group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </div>
             <div className="space-y-6 animate-fade-in">
-              <h1 className="lg:text-6xl text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mb-6 leading-tight">
+              <h1 className="lg:text-5xl text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mb-6 leading-tight">
                 Welcome to
                 <span className="block mt-2 bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 bg-clip-text">Group B Officers Academy</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto font-medium leading-relaxed">
+              <p className="text-lg lg:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto font-medium leading-relaxed">
                 Your gateway to success in the <span className="text-blue-600 font-bold">AOM LDCE Examination</span> through expert guidance and comprehensive preparation
               </p>
               <div className="flex flex-col sm:flex-row gap-5 justify-center mt-10">

@@ -169,7 +169,7 @@ const About = () => {
                 👨‍🏫 Our Expert
               </span>
             </div>
-            <h2 className="lg:text-5xl text-3xl font-black text-white mb-6 leading-tight">
+            <h2 className="lg:text-5xl text-2xl font-black text-white mb-6 leading-tight">
               Meet Our Expert Instructor
             </h2>
             <p className="lg:text-xl text-base md:text-2xl text-blue-200 font-medium">
@@ -184,8 +184,8 @@ const About = () => {
                 <div className="text-center">
                   <div className="relative mb-8 inline-block">
                     <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full blur-2xl opacity-60 animate-pulse"></div>
-                    <div className="relative w-40 h-40 bg-gradient-to-br from-yellow-400 via-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto shadow-2xl ring-4 ring-white/30">
-                      <span className="text-7xl">👨‍🏫</span>
+                    <div className="relative lg:w-40 lg:h-40 w-24 h-24 bg-gradient-to-br from-yellow-400 via-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto shadow-2xl ring-4 ring-white/30">
+                      <span className="lg:text-7xl text-5xl">👨‍🏫</span>
                     </div>
                   </div>
                   <h3 className="lg:text-3xl text-2xl font-black text-white mb-3">

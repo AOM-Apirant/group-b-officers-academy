@@ -56,7 +56,7 @@ const Contact = () => {
                     <h3 className="text-lg font-semibold text-gray-900">Address</h3>
                     <p className="text-gray-600">
                       Group B Officers Academy<br />
-                      ZRTI/MLY/SC/SCR<br />
+                      Hyderabad<br />
                       Indian Railways
                     </p>
                   </div>
@@ -69,8 +69,7 @@ const Contact = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">Phone</h3>
                     <p className="text-gray-600">
-                      +91-XXX-XXX-XXXX<br />
-                      +91-XXX-XXX-XXXX
+                      +91 97017 58170<br />
                     </p>
                   </div>
                 </div>
@@ -82,8 +81,7 @@ const Contact = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">Email</h3>
                     <p className="text-gray-600">
-                      info@groupbofficersacademy.com<br />
-                      support@groupbofficersacademy.com
+                      groupbofficersacademy@gmail.com<br />
                     </p>
                   </div>
                 </div>
