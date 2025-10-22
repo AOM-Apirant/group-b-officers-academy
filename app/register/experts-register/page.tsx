@@ -118,10 +118,10 @@ const ExpertsRegister = () => {
               />
             </div>
 
-            {/* Preparing for */}
+            {/* Expert for the post */}
             <div className="group">
               <label className="block text-sm font-semibold text-gray-700 mb-2 group-hover:text-blue-600 transition-colors">
-                Preparing for the post
+                Expert for the post
               </label>
               <select
                 name="preparingFor"
