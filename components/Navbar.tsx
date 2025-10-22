@@ -7,6 +7,8 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isRegisterDropdownOpen, setIsRegisterDropdownOpen] = useState(false)
   const [isMobileRegisterOpen, setIsMobileRegisterOpen] = useState(false)
+  const [isTraineeCoursesDropdownOpen, setIsTraineeCoursesDropdownOpen] = useState(false)
+  const [isMobileTraineeCoursesOpen, setIsMobileTraineeCoursesOpen] = useState(false)
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
@@ -43,21 +45,33 @@ const Navbar = () => {
             <Link href="/motto" className="text-gray-700 hover:text-blue-600 transition-colors duration-200">
               Motto
             </Link>
-            <Link href="/topics" className="text-gray-700 hover:text-blue-600 transition-colors duration-200">
-              Topics
-            </Link>
-            <Link href="/manuals" className="text-gray-700 hover:text-blue-600 transition-colors duration-200">
-              Manuals
-            </Link>
-            <Link href="/mcq-practice" className="text-gray-700 hover:text-blue-600 transition-colors duration-200">
-              MCQ Practice
-            </Link>
-            <Link href="/mcq-test" className="text-gray-700 hover:text-blue-600 transition-colors duration-200">
-              MCQ Test
-            </Link>
-            <Link href="/mcq-cbt" className="text-gray-700 hover:text-blue-600 transition-colors duration-200">
-              MCQ CBT
-            </Link>
+            <div className="relative" onMouseEnter={() => setIsTraineeCoursesDropdownOpen(true)} onMouseLeave={() => setIsTraineeCoursesDropdownOpen(false)}>
+              <button className="text-gray-700 hover:text-blue-600 transition-colors duration-200 flex items-center">
+                Trainee Courses
+                <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {isTraineeCoursesDropdownOpen && (
+                <div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
+                  <Link href="/topics" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    Topics
+                  </Link>
+                  <Link href="/manuals" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    Manuals
+                  </Link>
+                  <Link href="/mcq-practice" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    MCQ Practice
+                  </Link>
+                  <Link href="/mcq-test" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    MCQ Test
+                  </Link>
+                  <Link href="/mcq-cbt" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    MCQ CBT
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors duration-200">
               Contact
             </Link>
@@ -120,21 +134,36 @@ const Navbar = () => {
               <Link href="/motto" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>
                 Motto
               </Link>
-              <Link href="/topics" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>
-                Topics
-              </Link>
-              <Link href="/manuals" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>
-                Manuals
-              </Link>
-              <Link href="/mcq-practice" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>
-                MCQ Practice
-              </Link>
-              <Link href="/mcq-test" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>
-                MCQ Test
-              </Link>
-              <Link href="/mcq-cbt" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>
-                MCQ CBT
-              </Link>
+              <div>
+                <button 
+                  onClick={() => setIsMobileTraineeCoursesOpen(!isMobileTraineeCoursesOpen)}
+                  className="w-full flex justify-between items-center px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors"
+                >
+                  Trainee Courses
+                  <svg className={`h-4 w-4 transition-transform ${isMobileTraineeCoursesOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {isMobileTraineeCoursesOpen && (
+                  <div className="ml-4 mt-1 space-y-1">
+                    <Link href="/topics" className="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors text-sm" onClick={() => setIsMenuOpen(false)}>
+                      Topics
+                    </Link>
+                    <Link href="/manuals" className="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors text-sm" onClick={() => setIsMenuOpen(false)}>
+                      Manuals
+                    </Link>
+                    <Link href="/mcq-practice" className="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors text-sm" onClick={() => setIsMenuOpen(false)}>
+                      MCQ Practice
+                    </Link>
+                    <Link href="/mcq-test" className="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors text-sm" onClick={() => setIsMenuOpen(false)}>
+                      MCQ Test
+                    </Link>
+                    <Link href="/mcq-cbt" className="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors text-sm" onClick={() => setIsMenuOpen(false)}>
+                      MCQ CBT
+                    </Link>
+                  </div>
+                )}
+              </div>
               <Link href="/contact" className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>
                 Contact
               </Link>
