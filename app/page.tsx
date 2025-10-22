@@ -89,11 +89,11 @@ const Home = () => {
                             Experience the <span className="font-bold text-orange-600">Power of Mentorship</span> under the remarkable guidance of our beloved
                           </p>
                         </div>
-                        <p className="font-black lg:text-3xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-indigo-500 to-purple-700 mb-3 drop-shadow-lg tracking-tight animate-pulse">
+                        {/* <p className="font-black lg:text-3xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-indigo-500 to-purple-700 mb-3 drop-shadow-lg tracking-tight animate-pulse">
                           Sri SREENIVASULU CHEVURU
-                        </p>
+                        </p> */}
                         <p className="lg:text-xl text-base font-semibold text-gray-800 flex items-center justify-center gap-2">
-                          Senior Instructor, ZRTI/MLY/SC/SCR
+                          Senior Instructor from ZRTI
                         </p>
                         <p className="mt-5 text-base md:text-lg text-slate-700 max-w-xl mx-auto italic">
                           Unlock your fullest potential guided by inspired teaching, wisdom, and dedication.<br/>
