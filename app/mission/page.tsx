@@ -125,7 +125,114 @@ const Mission = () => {
         </div>
       </div>
 
-      {/* Core Values Section */}
+      {/* Images Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4">
+              <span className="px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 font-bold rounded-full text-sm uppercase tracking-wide">
+                📚 Training Information
+              </span>
+            </div>
+            <h2 className="lg:text-4xl text-2xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
+              Your Learning Journey
+            </h2>
+            <p className="lg:text-xl text-base md:text-2xl text-gray-600 font-medium">
+              Comprehensive support for your success
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
+            {/* Spared Slot Information Image */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-500 rounded-3xl blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
+              <div className="relative bg-white rounded-3xl p-2 shadow-2xl hover:shadow-green-300/50 transition-all duration-700 border border-green-100 transform hover:-translate-y-3">
+                <div className="relative overflow-hidden rounded-2xl">
+                  <Image
+                    src="/images/logo-in-mission-2.jpg"
+                    alt="Spared Slot Information - Group B Officers Academy"
+                    width={600}
+                    height={400}
+                    className="w-full h-auto rounded-2xl group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
+                  <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    <div className="bg-white/90 backdrop-blur-md rounded-xl p-4 shadow-lg">
+                      <h3 className="text-lg font-bold text-gray-800 mb-2">📅 Spared Slot Available</h3>
+                      <p className="text-sm text-gray-600">Saturday revision sessions for missed classes</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* WhatsApp Group Information Image */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-500 rounded-3xl blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
+              <div className="relative bg-white rounded-3xl p-2 shadow-2xl hover:shadow-orange-300/50 transition-all duration-700 border border-orange-100 transform hover:-translate-y-3">
+                <div className="relative overflow-hidden rounded-2xl">
+                  <Image
+                    src="/images/logo-in-mission-3.jpg"
+                    alt="WhatsApp Group Information - Group B Officers Academy"
+                    width={600}
+                    height={400}
+                    className="w-full h-auto rounded-2xl group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
+                  <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    <div className="bg-white/90 backdrop-blur-md rounded-xl p-4 shadow-lg">
+                      <h3 className="text-lg font-bold text-gray-800 mb-2">💬 Join WhatsApp Group</h3>
+                      <p className="text-sm text-gray-600">Dedicated AOM aspirants community</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Training Benefits */}
+          <div className="mt-16 text-center">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-2xl blur-xl opacity-20"></div>
+              <div className="relative bg-white/80 backdrop-blur-xl rounded-2xl p-8 shadow-xl border border-blue-100/50">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
+                  Why Choose Our Training?
+                </h3>
+                <div className="grid md:grid-cols-3 gap-6 text-left">
+                  <div className="flex items-start space-x-3">
+                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-sm font-bold">✓</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800 mb-1">Flexible Learning</h4>
+                      <p className="text-sm text-gray-600">Saturday revision sessions for missed classes</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-orange-400 to-red-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-sm font-bold">✓</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800 mb-1">Community Support</h4>
+                      <p className="text-sm text-gray-600">Dedicated WhatsApp group for serious aspirants</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-sm font-bold">✓</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800 mb-1">Expert Guidance</h4>
+                      <p className="text-sm text-gray-600">Senior instructor from ZRTI</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <div className="max-w-7xl mx-auto px-4 lg:px-8 py-10">
         <div className="text-center mb-12">
           <h2 className="lg:text-4xl text-2xl font-bold text-gray-800 mb-4">

@@ -99,8 +99,90 @@ const About = () => {
         </div>
       </section>
 
+      {/* Images Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-yellow-50 to-pink-50"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4">
+              <span className="px-4 py-2 bg-gradient-to-r from-orange-100 to-pink-100 text-orange-700 font-bold rounded-full text-sm uppercase tracking-wide">
+                💪 Motivation Gallery
+              </span>
+            </div>
+            <h2 className="lg:text-4xl text-2xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
+              Mindset & Determination
+            </h2>
+            <p className="lg:text-xl text-base md:text-2xl text-gray-600 font-medium">
+              Your attitude determines your altitude
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
+            {/* Mindset is Everything Image */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-3xl blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
+              <div className="relative bg-white rounded-3xl p-2 shadow-2xl hover:shadow-blue-300/50 transition-all duration-700 border border-blue-100 transform hover:-translate-y-3">
+                <div className="relative overflow-hidden rounded-2xl">
+                  <Image
+                    src="/images/logo-in-about-2.jpg"
+                    alt="Mindset is Everything - Group B Officers Academy"
+                    width={600}
+                    height={400}
+                    className="w-full h-auto rounded-2xl group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
+                  <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    <div className="bg-white/90 backdrop-blur-md rounded-xl p-4 shadow-lg">
+                      <h3 className="text-lg font-bold text-gray-800 mb-2">🧠 Mindset is Everything</h3>
+                      <p className="text-sm text-gray-600">Transform your thinking, transform your future</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-      {/* Mission & Vision */}
+            {/* Winners Find a Way Image */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-500 rounded-3xl blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
+              <div className="relative bg-white rounded-3xl p-2 shadow-2xl hover:shadow-green-300/50 transition-all duration-700 border border-green-100 transform hover:-translate-y-3">
+                <div className="relative overflow-hidden rounded-2xl">
+                  <Image
+                    src="/images/logo-in-about-3.jpg"
+                    alt="Winners Find a Way - Group B Officers Academy"
+                    width={600}
+                    height={400}
+                    className="w-full h-auto rounded-2xl group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
+                  <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    <div className="bg-white/90 backdrop-blur-md rounded-xl p-4 shadow-lg">
+                      <h3 className="text-lg font-bold text-gray-800 mb-2">🏆 Winners Find a Way</h3>
+                      <p className="text-sm text-gray-600">Overcome obstacles, don&apos;t make excuses</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Motivational Quote */}
+          <div className="mt-16 text-center">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 rounded-2xl blur-xl opacity-20"></div>
+              <div className="relative bg-white/80 backdrop-blur-xl rounded-2xl p-8 shadow-xl border border-yellow-100/50">
+                <blockquote className="text-xl md:text-2xl font-semibold text-gray-800 italic leading-relaxed">
+                  &ldquo;Success is not final, failure is not fatal: it is the courage to continue that counts.&rdquo;
+                </blockquote>
+                <div className="mt-4">
+                  <span className="inline-block px-4 py-2 bg-gradient-to-r from-orange-100 to-pink-100 text-orange-700 font-bold rounded-full text-sm">
+                    - Group B Officers Academy
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50 to-purple-50"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

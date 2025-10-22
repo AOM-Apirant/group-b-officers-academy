@@ -83,6 +83,94 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Motto Section */}
+      
+
+      {/* Images Section */}
+      <section className="relative py-16 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-yellow-50 to-pink-50"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-12">
+            <div className="inline-block mb-4">
+              <span className="px-4 py-2 bg-gradient-to-r from-orange-100 to-pink-100 text-orange-700 font-bold rounded-full text-sm uppercase tracking-wide">
+                Inspiration Gallery
+              </span>
+            </div>
+            <h2 className="lg:text-4xl text-2xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
+              Your Journey to Success
+            </h2>
+            <p className="lg:text-xl text-base md:text-2xl text-gray-600 font-medium">
+              Visualize your path to excellence
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
+            {/* First Image */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-pink-500 rounded-3xl blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
+              <div className="relative bg-white rounded-3xl p-2 shadow-2xl hover:shadow-orange-300/50 transition-all duration-700 border border-orange-100 transform hover:-translate-y-3">
+                <div className="relative overflow-hidden rounded-2xl">
+                  <Image
+                    src="/images/logo-in-home-2.jpg"
+                    alt="Algorithm of Life - Group B Officers Academy"
+                    width={600}
+                    height={400}
+                    className="w-full h-auto rounded-2xl group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
+                  <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    <div className="bg-white/90 backdrop-blur-md rounded-xl p-4 shadow-lg">
+                      <h3 className="text-lg font-bold text-gray-800 mb-2">Algorithm of Life</h3>
+                      <p className="text-sm text-gray-600">Thoughts → Decisions → Focus → Actions → FUTURE</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Second Image */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-3xl blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
+              <div className="relative bg-white rounded-3xl p-2 shadow-2xl hover:shadow-blue-300/50 transition-all duration-700 border border-blue-100 transform hover:-translate-y-3">
+                <div className="relative overflow-hidden rounded-2xl">
+                  <Image
+                    src="/images/logo-in-home-3.jpg"
+                    alt="Protection and Guidance - Group B Officers Academy"
+                    width={600}
+                    height={400}
+                    className="w-full h-auto rounded-2xl group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
+                  <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    <div className="bg-white/90 backdrop-blur-md rounded-xl p-4 shadow-lg">
+                      <h3 className="text-lg font-bold text-gray-800 mb-2">Protection & Guidance</h3>
+                      <p className="text-sm text-gray-600">We nurture your dreams like a parent protects their young</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Quote */}
+          <div className="mt-16 text-center">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 rounded-2xl blur-xl opacity-20"></div>
+              <div className="relative bg-white/80 backdrop-blur-xl rounded-2xl p-8 shadow-xl border border-yellow-100/50">
+                <blockquote className="text-xl md:text-2xl font-semibold text-gray-800 italic leading-relaxed">
+                  &ldquo;Success is not just about reaching the destination, it&apos;s about the journey of growth, learning, and transformation.&rdquo;
+                </blockquote>
+                <div className="mt-4">
+                  <span className="inline-block px-4 py-2 bg-gradient-to-r from-orange-100 to-pink-100 text-orange-700 font-bold rounded-full text-sm">
+                    - Group B Officers Academy
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Welcome Message Section */}
       <section className="relative py-10 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-white to-blue-50"></div>
@@ -243,31 +331,60 @@ const Home = () => {
             <p className="lg:text-xl text-base md:text-2xl text-blue-100 mb-10 font-medium leading-relaxed">
               Join thousands of successful officers who started their journey with us.
             </p>
-            <div className="flex flex-col sm:flex-row gap-5 justify-center">
-              <button className="group relative overflow-hidden bg-white text-blue-900 px-10 py-5 rounded-xl hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 font-black text-xl transform hover:scale-105">
-                <span className="relative z-10">Enroll Now</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-                <span className="relative z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"> 🚀</span>
-              </button>
-              <button className="border-2 border-white text-white px-10 py-5 rounded-xl hover:bg-white hover:text-blue-900 transition-all duration-300 font-bold text-xl backdrop-blur-sm bg-white/10 hover:shadow-xl transform hover:scale-105">
-                Contact Us
-              </button>
-            </div>
             
-            <div className="mt-16 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-              <div className="text-center">
-                <p className="text-4xl md:text-5xl font-black text-white mb-2">1000+</p>
-                <p className="text-blue-200 font-semibold">Students</p>
+            {/* Course Information Images */}
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 mb-16">
+              {/* AOM Crash Course Image */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-3xl blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
+                <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-3 shadow-2xl hover:shadow-yellow-300/50 transition-all duration-700 border border-yellow-200/30 transform hover:-translate-y-3">
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <Image
+                      src="/images/logo-in-home-4.jpg"
+                      alt="AOM Crash Course - Group B Officers Academy"
+                      width={500}
+                      height={400}
+                      className="w-full h-auto rounded-2xl group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
+                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                      <div className="bg-yellow-400/90 backdrop-blur-md rounded-xl px-3 py-2 shadow-lg">
+                        <span className="text-yellow-900 font-bold text-sm">🔥 CRASH COURSE</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="text-center">
-                <p className="text-4xl md:text-5xl font-black text-white mb-2">95%</p>
-                <p className="text-blue-200 font-semibold">Success Rate</p>
-              </div>
-              <div className="text-center">
-                <p className="text-4xl md:text-5xl font-black text-white mb-2">10+</p>
-                <p className="text-blue-200 font-semibold">Years</p>
+
+              {/* AOM Aspirants Join Now Image */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-3xl blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
+                <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-3 shadow-2xl hover:shadow-blue-300/50 transition-all duration-700 border border-blue-200/30 transform hover:-translate-y-3">
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <Image
+                      src="/images/logo-in-home-5.jpg"
+                      alt="AOM Aspirants - Join Our Zoom Classes"
+                      width={500}
+                      height={400}
+                      className="w-full h-auto rounded-2xl group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
+                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                      <div className="bg-blue-400/90 backdrop-blur-md rounded-xl px-3 py-2 shadow-lg">
+                        <span className="text-blue-900 font-bold text-sm">📚 ZOOM CLASSES</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+
+            {/* Action Buttons */}
+            
+            
+            {/* Stats */}
+            
+            
           </div>
         </div>
       </section>

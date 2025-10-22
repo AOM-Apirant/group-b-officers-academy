@@ -130,7 +130,115 @@ const Vision = () => {
         </div>
       </div>
 
-      {/* Vision Pillars Section */}
+      {/* Images Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4">
+              <span className="px-4 py-2 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 font-bold rounded-full text-sm uppercase tracking-wide">
+                🚀 Action Gallery
+              </span>
+            </div>
+            <h2 className="lg:text-4xl text-2xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
+              Take Action Today
+            </h2>
+            <p className="lg:text-xl text-base md:text-2xl text-gray-600 font-medium">
+              Your future starts with the decisions you make today
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
+            {/* Crash Course Information Image */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-500 rounded-3xl blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
+              <div className="relative bg-white rounded-3xl p-2 shadow-2xl hover:shadow-orange-300/50 transition-all duration-700 border border-orange-100 transform hover:-translate-y-3">
+                <div className="relative overflow-hidden rounded-2xl">
+                  <Image
+                    src="/images/logo-in-vision-2.jpg"
+                    alt="Join Crash Course - Group B Officers Academy"
+                    width={600}
+                    height={400}
+                    className="w-full h-auto rounded-2xl group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
+                  <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    <div className="bg-white/90 backdrop-blur-md rounded-xl p-4 shadow-lg">
+                      <h3 className="text-lg font-bold text-gray-800 mb-2">🔥 Join Crash Course</h3>
+                      <p className="text-sm text-gray-600">60-day intensive preparation program</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Work for Your Goal Image */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-3xl blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
+              <div className="relative bg-white rounded-3xl p-2 shadow-2xl hover:shadow-blue-300/50 transition-all duration-700 border border-blue-100 transform hover:-translate-y-3">
+                <div className="relative overflow-hidden rounded-2xl">
+                  <Image
+                    src="/images/logo-in-vision-3.jpg"
+                    alt="Work for Your Goal - Group B Officers Academy"
+                    width={600}
+                    height={400}
+                    className="w-full h-auto rounded-2xl group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
+                  <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    <div className="bg-white/90 backdrop-blur-md rounded-xl p-4 shadow-lg">
+                      <h3 className="text-lg font-bold text-gray-800 mb-2">🎯 Work for Your Goal</h3>
+                      <p className="text-sm text-gray-600">Success comes to those who take action</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action Section */}
+          <div className="mt-16 text-center">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-blue-400 to-indigo-400 rounded-2xl blur-xl opacity-20"></div>
+              <div className="relative bg-white/80 backdrop-blur-xl rounded-2xl p-8 shadow-xl border border-purple-100/50">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
+                  Ready to Transform Your Future?
+                </h3>
+                <div className="grid md:grid-cols-2 gap-6 text-left">
+                  <div className="flex items-start space-x-3">
+                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-orange-400 to-red-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-sm font-bold">🔥</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800 mb-1">Intensive Crash Course</h4>
+                      <p className="text-sm text-gray-600">60-day program starting October 22, 2025</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-sm font-bold">🎯</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800 mb-1">Goal-Oriented Learning</h4>
+                      <p className="text-sm text-gray-600">Structured approach to achieve your dreams</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-6">
+                  <blockquote className="text-lg md:text-xl font-semibold text-gray-800 italic leading-relaxed">
+                    &ldquo;The future belongs to those who believe in the beauty of their dreams and take action to achieve them.&rdquo;
+                  </blockquote>
+                  <div className="mt-4">
+                    <span className="inline-block px-4 py-2 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 font-bold rounded-full text-sm">
+                      - Group B Officers Academy
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <div className="max-w-7xl mx-auto px-4 lg:px-8 py-10">
         <div className="text-center mb-12">
           <h2 className="lg:text-4xl text-2xl font-bold text-gray-800 mb-4">
