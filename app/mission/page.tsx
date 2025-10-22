@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const Mission = () => {
   const coreValues = [
@@ -79,24 +80,45 @@ const Mission = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center">
-            <div className="inline-block mb-6">
-              <div className="text-7xl mb-4 animate-bounce">🎯</div>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-6 animate-fade-in">
-              Our Mission
-            </h1>
-            <p className="text-2xl md:text-3xl font-semibold mb-4 text-blue-100">
-              Empowering Future Railway Officers
-            </p>
-            <div className="max-w-4xl mx-auto">
-              <p className="text-xl md:text-2xl leading-relaxed text-blue-50 mb-6">
-                To provide exceptional education, guidance, and resources to candidates preparing for Railway Group B Officer examinations, helping them achieve their dreams and aspirations
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Side - Content */}
+            <div className="space-y-8">
+              <div className="flex justify-center mb-6">
+                <div className="lg:text-7xl text-5xl mb-4 animate-bounce flex justify-center items-center">🎯</div>
+              </div>
+              <h1 className="lg:text-5xl text-3xl text-center font-extrabold mb-6 animate-fade-in">
+                Our Mission
+              </h1>
+              <p className="lg:text-xl text-lg text-center font-semibold mb-4 text-blue-100">
+                Empowering Future Railway Officers
               </p>
-              <div className="inline-block px-8 py-3 bg-white/20 backdrop-blur-sm rounded-full">
-                <p className="text-lg font-semibold">
-                  &ldquo;Empowerment through Education, Transformation through Success&rdquo;
+              <div className="space-y-6">
+                <p className="lg:text-xl text-lg leading-relaxed text-blue-50">
+                  To provide exceptional education, guidance, and resources to candidates preparing for Railway Group B Officer examinations, helping them achieve their dreams and aspirations
                 </p>
+                <div className="inline-block px-8 py-3 bg-white/20 backdrop-blur-sm rounded-full">
+                  <p className="text-lg font-semibold">
+                    &ldquo;Empowerment through Education, Transformation through Success&rdquo;
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Side - Logo */}
+            <div className="relative flex justify-center lg:justify-end">
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500 animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                <div className="relative">
+                  <Image
+                    src="/images/logo-in-mission.jpg"
+                    alt="Group B Officers Academy Mission"
+                    width={400}
+                    height={400}
+                    className="relative rounded-lg shadow-2xl ring-8 ring-white group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20 group-hover:from-blue-500/30 group-hover:to-purple-500/30 transition-all duration-500"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -104,9 +126,9 @@ const Mission = () => {
       </div>
 
       {/* Core Values Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 py-10">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="lg:text-4xl text-2xl font-bold text-gray-800 mb-4">
             Our Core Values
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
@@ -119,7 +141,7 @@ const Mission = () => {
               className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
             >
               <div className={`bg-gradient-to-r ${value.color} p-8 text-center transition-all duration-300`}>
-                <div className="text-6xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                <div className="lg:text-6xl text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
                   {value.icon}
                 </div>
               </div>
@@ -140,11 +162,11 @@ const Mission = () => {
       <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="lg:text-4xl text-2xl font-bold text-gray-800 mb-4">
               Our Objectives
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-4"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="lg:text-xl text-lg text-gray-600 max-w-3xl mx-auto">
               Goals we are committed to for student success
             </p>
           </div>
@@ -153,22 +175,21 @@ const Mission = () => {
             {objectives.map((objective, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 transform hover:-translate-y-1"
+                className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 lg:p-8 p-4 transform hover:-translate-y-1"
               >
                 <div className="flex items-start space-x-6">
                   <div className="flex-shrink-0">
-                    <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center text-white text-3xl font-bold shadow-lg">
+                    <div className="lg:w-20 lg:h-20 w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center text-white lg:text-3xl text-2xl font-bold shadow-lg">
                       {objective.number}
                     </div>
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center mb-3">
-                      <span className="text-4xl mr-3">{objective.icon}</span>
-                      <h3 className="text-2xl font-bold text-gray-800">
+                      <h3 className="lg:text-2xl text-xl font-bold text-gray-800">
                         {objective.title}
                       </h3>
                     </div>
-                    <p className="text-gray-600 leading-relaxed text-lg">
+                    <p className="lg:text-xl text-lg text-gray-600 leading-relaxed">
                       {objective.description}
                     </p>
                   </div>
@@ -180,7 +201,7 @@ const Mission = () => {
       </div>
 
       {/* Commitment Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 py-10">
         <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl shadow-2xl p-12 text-white text-center overflow-hidden relative">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full filter blur-3xl"></div>
@@ -188,27 +209,27 @@ const Mission = () => {
           </div>
           
           <div className="relative z-10">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="lg:text-4xl text-2xl font-bold mb-6">
               Our Commitment
             </h2>
-            <p className="text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto mb-8 text-blue-50">
+            <p className="lg:text-xl text-lg leading-relaxed max-w-4xl mx-auto mb-8 text-blue-50">
               We want every student to succeed in achieving their goals. Through quality education, dedicated instructors, and comprehensive support, we pave the way for your success.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               <div className="bg-white/20 backdrop-blur-sm rounded-xl px-8 py-4">
-                <div className="text-3xl font-bold">5000+</div>
+                <div className="lg:text-3xl text-xl font-bold">5000+</div>
                 <div className="text-sm text-blue-100">Students</div>
               </div>
               <div className="bg-white/20 backdrop-blur-sm rounded-xl px-8 py-4">
-                <div className="text-3xl font-bold">95%</div>
+                <div className="lg:text-3xl text-xl font-bold">95%</div>
                 <div className="text-sm text-blue-100">Success Rate</div>
               </div>
               <div className="bg-white/20 backdrop-blur-sm rounded-xl px-8 py-4">
-                <div className="text-3xl font-bold">50+</div>
+                <div className="lg:text-3xl text-xl font-bold">50+</div>
                 <div className="text-sm text-blue-100">Experts</div>
               </div>
               <div className="bg-white/20 backdrop-blur-sm rounded-xl px-8 py-4">
-                <div className="text-3xl font-bold">24/7</div>
+                <div className="lg:text-3xl text-xl font-bold">24/7</div>
                 <div className="text-sm text-blue-100">Support</div>
               </div>
             </div>
@@ -217,9 +238,9 @@ const Mission = () => {
       </div>
 
       {/* Call to Action */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 pb-10">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">
+          <h2 className="lg:text-3xl text-xl font-bold text-gray-800 mb-6">
             Achieve Your Dreams With Us
           </h2>
           <div className="flex flex-wrap justify-center gap-4">

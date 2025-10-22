@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const Vision = () => {
   const visionPillars = [
@@ -82,26 +83,47 @@ const Vision = () => {
           <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-purple-300 rounded-full mix-blend-overlay filter blur-3xl animate-blob animation-delay-4000"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center">
-            <div className="inline-block mb-6">
-              <div className="text-7xl mb-4 animate-bounce">👁️</div>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-6 animate-fade-in">
-              Our Vision
-            </h1>
-            <p className="text-2xl md:text-3xl font-semibold mb-4 text-purple-100">
-              Shaping Tomorrow&apos;s Railway Leaders
-            </p>
-            <div className="max-w-4xl mx-auto">
-              <p className="text-xl md:text-2xl leading-relaxed text-purple-50 mb-6">
-                To be the most trusted and innovative academy for Railway Group B officer preparation, 
-                transforming aspiring candidates into competent professionals who will shape the future of Indian Railways
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Side - Content */}
+            <div className="space-y-8">
+              <div className="flex justify-center mb-6">
+                <div className="lg:text-7xl text-5xl mb-4 animate-bounce flex justify-center items-center">👁️</div>
+              </div>
+              <h1 className="lg:text-5xl text-3xl text-center font-extrabold mb-6 animate-fade-in">
+                Our Vision
+              </h1>
+              <p className="lg:text-xl text-lg text-center font-semibold mb-4 text-purple-100">
+                Shaping Tomorrow&apos;s Railway Leaders
               </p>
-              <div className="inline-block px-8 py-3 bg-white/20 backdrop-blur-sm rounded-full">
-                <p className="text-lg font-semibold">
-                  &ldquo;Envisioning Excellence, Inspiring Success&rdquo;
+              <div className="space-y-6">
+                <p className="lg:text-xl text-lg leading-relaxed text-purple-50">
+                  To be the most trusted and innovative academy for Railway Group B officer preparation, 
+                  transforming aspiring candidates into competent professionals who will shape the future of Indian Railways
                 </p>
+                <div className="inline-block px-8 py-3 bg-white/20 backdrop-blur-sm rounded-full">
+                  <p className="text-lg font-semibold">
+                    &ldquo;Envisioning Excellence, Inspiring Success&rdquo;
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Side - Logo */}
+            <div className="relative flex justify-center lg:justify-end">
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500 animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-400 to-blue-500 rounded-lg blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                <div className="relative">
+                  <Image
+                    src="/images/logo-in-vision.jpg"
+                    alt="Group B Officers Academy Vision"
+                    width={400}
+                    height={400}
+                    className="relative rounded-lg shadow-2xl ring-8 ring-white group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-purple-500/20 to-blue-500/20 group-hover:from-purple-500/30 group-hover:to-blue-500/30 transition-all duration-500"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -109,13 +131,13 @@ const Vision = () => {
       </div>
 
       {/* Vision Pillars Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 py-10">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="lg:text-4xl text-2xl font-bold text-gray-800 mb-4">
             Our Vision Pillars
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto rounded-full mb-4"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="lg:text-xl text-lg text-gray-600 max-w-3xl mx-auto">
             The foundational elements that guide our vision for the future
           </p>
         </div>
@@ -127,15 +149,15 @@ const Vision = () => {
               className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
             >
               <div className={`bg-gradient-to-r ${pillar.color} p-8 text-center transition-all duration-300`}>
-                <div className="text-6xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                <div className="lg:text-6xl text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
                   {pillar.icon}
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors">
+                <h3 className="lg:text-xl text-lg font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors">
                   {pillar.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="lg:text-xl text-lg text-gray-600 leading-relaxed">
                   {pillar.description}
                 </p>
               </div>
@@ -145,35 +167,34 @@ const Vision = () => {
       </div>
 
       {/* Future Goals Timeline */}
-      <div className="bg-gradient-to-br from-gray-50 to-purple-50 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="bg-gradient-to-br from-gray-50 to-purple-50 py-10">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="lg:text-4xl text-2xl font-bold text-gray-800 mb-4">
               Future Roadmap
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto rounded-full mb-4"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="lg:text-xl text-lg text-gray-600 max-w-3xl mx-auto">
               Our strategic goals for becoming the leading railway preparation academy
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {futureGoals.map((goal, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 transform hover:-translate-y-1"
+                className="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 lg:p-8 p-4 transform hover:-translate-y-1"
               >
                 <div className="flex items-start space-x-6">
                   <div className="flex-shrink-0">
-                    <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                    <div className="lg:w-20 lg:h-20 w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center text-white lg:text-xl text-lg font-bold shadow-lg">
                       {goal.year}
                     </div>
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center">
-                        <span className="text-4xl mr-3">{goal.icon}</span>
-                        <h3 className="text-2xl font-bold text-gray-800">
+                        <h3 className="lg:text-2xl text-xl font-bold text-gray-800">
                           {goal.title}
                         </h3>
                       </div>
@@ -186,7 +207,7 @@ const Vision = () => {
                         {goal.status}
                       </span>
                     </div>
-                    <p className="text-gray-600 leading-relaxed text-lg">
+                    <p className="lg:text-xl text-lg text-gray-600 leading-relaxed">
                       {goal.description}
                     </p>
                   </div>
@@ -198,41 +219,41 @@ const Vision = () => {
       </div>
 
       {/* Vision Statement */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 rounded-3xl shadow-2xl p-12 text-white overflow-hidden relative">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 py-10">
+        <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 rounded-3xl shadow-2xl lg:p-12 p-6 text-white overflow-hidden relative">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full filter blur-3xl"></div>
             <div className="absolute bottom-0 right-0 w-64 h-64 bg-pink-300 rounded-full filter blur-3xl"></div>
           </div>
           
           <div className="relative z-10 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="lg:text-4xl text-2xl font-bold mb-6">
               What We Envision
             </h2>
-            <p className="text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto mb-8 text-purple-50">
+            <p className="lg:text-xl text-lg leading-relaxed max-w-4xl mx-auto mb-8 text-purple-50">
               We envision a future where every aspiring railway professional has access to world-class education, 
               personalized mentorship, and the tools they need to excel in their careers and contribute to the 
               development of India&apos;s railway infrastructure.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-12">
               <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
-                <div className="text-5xl mb-3">🎯</div>
-                <h3 className="font-bold text-xl mb-2">Our Target</h3>
+                <div className="lg:text-5xl text-4xl mb-3">🎯</div>
+                <h3 className="lg:text-xl text-lg font-bold mb-2">Our Target</h3>
                 <p className="text-purple-100 text-sm">
                   Become the #1 choice for Railway Group B preparation by 2026
                 </p>
               </div>
               <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
-                <div className="text-5xl mb-3">📈</div>
-                <h3 className="font-bold text-xl mb-2">Our Growth</h3>
+                <div className="lg:text-5xl text-4xl mb-3">📈</div>
+                <h3 className="lg:text-xl text-lg font-bold mb-2">Our Growth</h3>
                 <p className="text-purple-100 text-sm">
                   Expand to serve 25,000+ students annually with 98% satisfaction
                 </p>
               </div>
               <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
-                <div className="text-5xl mb-3">🌟</div>
-                <h3 className="font-bold text-xl mb-2">Our Legacy</h3>
+                <div className="lg:text-5xl text-4xl mb-3">🌟</div>
+                <h3 className="lg:text-xl text-lg font-bold mb-2">Our Legacy</h3>
                 <p className="text-purple-100 text-sm">
                   Create generations of successful railway professionals
                 </p>
@@ -243,12 +264,12 @@ const Vision = () => {
       </div>
 
       {/* Call to Action */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 pb-10">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">
+          <h2 className="lg:text-3xl text-xl font-bold text-gray-800 mb-6">
             Be Part of Our Vision
           </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="lg:text-xl text-base text-gray-600 mb-8 max-w-2xl mx-auto">
             Join us in shaping the future of railway education and your career
           </p>
           <div className="flex flex-wrap justify-center gap-4">

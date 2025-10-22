@@ -12,38 +12,71 @@ const Home = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-16 px-4 lg:px-8">
+      <section className="relative py-20 px-4 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="mb-8 group">
-              <div className="relative inline-block">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-2xl opacity-40 group-hover:opacity-60 transition-opacity duration-500 animate-pulse"></div>
-                <Image
-                  src="/logo.jpg"
-                  alt="Group B Officers Academy"
-                  width={150}
-                  height={150}
-                  className="relative mx-auto rounded-full shadow-2xl ring-4 ring-white group-hover:scale-105 transition-transform duration-500"
-                />
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Side - Welcome Message */}
+            <div className="space-y-8 animate-fade-in">
+              <div className="space-y-6">
+                <div className="inline-block">
+                  <span className="px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 font-bold rounded-full text-sm uppercase tracking-wide">
+                    Welcome to Excellence
+                  </span>
+                </div>
+                <h1 className="lg:text-6xl text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 leading-tight">
+                  Group B Officers Academy
+                </h1>
+                <p className="text-xl lg:text-2xl text-gray-700 font-medium leading-relaxed">
+                  Your gateway to success in the <span className="text-blue-600 font-bold">AOM LDCE Examination</span> through expert guidance and comprehensive preparation
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Join thousands of successful officers who achieved their dreams through our structured learning approach, interactive classes, and expert mentorship.
+                </p>
               </div>
-            </div>
-            <div className="space-y-6 animate-fade-in">
-              <h1 className="lg:text-5xl text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 mb-6 leading-tight">
-                Welcome to
-                <span className="block mt-2 bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 bg-clip-text">Group B Officers Academy</span>
-              </h1>
-              <p className="text-lg lg:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto font-medium leading-relaxed">
-                Your gateway to success in the <span className="text-blue-600 font-bold">AOM LDCE Examination</span> through expert guidance and comprehensive preparation
-              </p>
-              <div className="flex flex-col sm:flex-row gap-5 justify-center mt-10">
-                <button className="group relative bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-10 py-4 rounded-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 font-bold text-lg overflow-hidden">
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button className="group relative bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 font-bold text-lg overflow-hidden">
                   <span className="relative z-10">Start Learning</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
-                <button className="group relative border-2 border-blue-600 text-blue-700 px-10 py-4 rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300 font-bold text-lg bg-white/80 backdrop-blur-sm overflow-hidden">
+                <button className="group relative border-2 border-blue-600 text-blue-700 px-8 py-4 rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300 font-bold text-lg bg-white/80 backdrop-blur-sm overflow-hidden">
                   <span className="relative z-10 group-hover:text-white transition-colors duration-300">Learn More</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                 </button>
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-6 pt-8">
+                <div className="text-center">
+                  <p className="text-3xl font-black text-blue-600 mb-1">1000+</p>
+                  <p className="text-gray-600 font-semibold">Students</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-3xl font-black text-purple-600 mb-1">95%</p>
+                  <p className="text-gray-600 font-semibold">Success Rate</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-3xl font-black text-indigo-600 mb-1">10+</p>
+                  <p className="text-gray-600 font-semibold">Years</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Side - Logo */}
+            <div className="relative flex justify-center lg:justify-end">
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500 animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                <div className="relative">
+                  <Image
+                    src="/images/logo-in-home.jpg"
+                    alt="Group B Officers Academy"
+                    width={400}
+                    height={400}
+                    className="relative rounded-lg shadow-2xl ring-8 ring-white group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20 group-hover:from-blue-500/30 group-hover:to-purple-500/30 transition-all duration-500"></div>
+                </div>
               </div>
             </div>
           </div>
