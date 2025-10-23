@@ -2,24 +2,46 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
-const Login = () =>     {
+const Login = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
   })
   const [isLoading, setIsLoading] = useState(false)
+  const router = useRouter()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
     
-    // Simulate login process
-    setTimeout(() => {
-      console.log('Login attempt:', formData)
-      alert('Login successful! (This is a demo)')
+    try {
+      const response = await fetch('/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const result = await response.json()
+
+      if (response.ok) {
+        alert(`Login successful! Welcome ${result.user.name} (${result.user.userType})`)
+        // Here you can redirect to dashboard or store user data
+        console.log('User data:', result.user)
+        // Redirect to home page or dashboard
+        router.push('/')
+      } else {
+        alert(`Error: ${result.error}`)
+      }
+    } catch (error) {
+      console.error('Error during login:', error)
+      alert('Login failed. Please try again.')
+    } finally {
       setIsLoading(false)
-    }, 1000)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

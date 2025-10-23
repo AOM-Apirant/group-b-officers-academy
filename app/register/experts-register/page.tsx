@@ -12,7 +12,8 @@ const ExpertsRegister = () => {
     zone: '',
     phone: '',
     address: '',
-    email: ''
+    email: '',
+    password: ''
   })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -22,10 +23,43 @@ const ExpertsRegister = () => {
     })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    // Add your form submission logic here
+    
+    try {
+      const response = await fetch('/api/experts-register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const result = await response.json()
+
+      if (response.ok) {
+        alert('Expert registration completed successfully! We will review your application and get back to you soon.')
+        // Reset form
+        setFormData({
+          name: '',
+          designation: '',
+          workingPost: '',
+          department: '',
+          preparingFor: '',
+          division: '',
+          zone: '',
+          phone: '',
+          address: '',
+          email: '',
+          password: ''
+        })
+      } else {
+        alert(`Error: ${result.error}`)
+      }
+    } catch (error) {
+      console.error('Error submitting registration:', error)
+      alert('Failed to complete registration. Please try again.')
+    }
   }
 
   return (
@@ -219,6 +253,22 @@ const ExpertsRegister = () => {
                 required
                 className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-200 outline-none hover:border-gray-300"
                 placeholder="your.email@example.com"
+              />
+            </div>
+
+            {/* Password */}
+            <div className="group">
+              <label className="block text-sm font-semibold text-gray-700 mb-2 group-hover:text-blue-600 transition-colors">
+                Password <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-200 outline-none hover:border-gray-300"
+                placeholder="Create a secure password"
               />
             </div>
 
