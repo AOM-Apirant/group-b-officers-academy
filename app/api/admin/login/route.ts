@@ -13,7 +13,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Connect to database
+    // Connect to database (currently not used but kept for future database operations)
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { db } = await connectToDatabase();
 
     // Check admin credentials (in production, use environment variables)

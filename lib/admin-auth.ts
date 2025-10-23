@@ -24,7 +24,7 @@ export function adminAuthMiddleware(request: NextRequest) {
     }
 
     return null; // Authentication successful
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Invalid session format" },
       { status: 401 }

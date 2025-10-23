@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
 const AdminLogin = () => {
@@ -125,9 +126,9 @@ const AdminLogin = () => {
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">
               Back to{' '}
-              <a href="/" className="font-medium text-red-600 hover:text-red-500 transition-colors">
+              <Link href="/" className="font-medium text-red-600 hover:text-red-500 transition-colors">
                 Main Site
-              </a>
+              </Link>
             </p>
           </div>
         </div>
