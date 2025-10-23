@@ -319,7 +319,7 @@ const Home = () => {
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="inline-block mb-6">
               <span className="px-5 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-black rounded-full text-sm uppercase tracking-wider shadow-lg">
                 Start Today
@@ -332,48 +332,118 @@ const Home = () => {
               Join thousands of successful officers who started their journey with us.
             </p>
             
-            {/* Course Information Images */}
-            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 mb-16">
-              {/* AOM Crash Course Image */}
-              <div className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-3xl blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
-                <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-3 shadow-2xl hover:shadow-yellow-300/50 transition-all duration-700 border border-yellow-200/30 transform hover:-translate-y-3">
-                  <div className="relative overflow-hidden rounded-2xl">
-                    <Image
-                      src="/images/logo-in-home-4.jpg"
-                      alt="AOM Crash Course - Group B Officers Academy"
-                      width={500}
-                      height={400}
-                      className="w-full h-auto rounded-2xl group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
-                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                      <div className="bg-yellow-400/90 backdrop-blur-md rounded-xl px-3 py-2 shadow-lg">
-                        <span className="text-yellow-900 font-bold text-sm">🔥 CRASH COURSE</span>
+            {/* Course Information Images - Floating Design */}
+            <div className="relative mb-16">
+              {/* Floating Background Elements */}
+              <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-10 left-10 w-32 h-32 bg-yellow-400/20 rounded-full blur-xl animate-pulse"></div>
+                <div className="absolute top-20 right-20 w-24 h-24 bg-blue-400/20 rounded-full blur-xl animate-pulse animation-delay-2000"></div>
+                <div className="absolute bottom-10 left-1/3 w-28 h-28 bg-purple-400/20 rounded-full blur-xl animate-pulse animation-delay-4000"></div>
+                <div className="absolute bottom-20 right-1/3 w-20 h-20 bg-orange-400/20 rounded-full blur-xl animate-pulse animation-delay-6000"></div>
+              </div>
+
+              {/* Floating Images Grid */}
+              <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-6">
+                {/* Image 1 - AOM Crash Course */}
+                <div className="group relative animate-float-slow">
+                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-3xl blur-2xl opacity-0 group-hover:opacity-40 transition-opacity duration-700"></div>
+                  <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-3 lg:p-2 shadow-2xl hover:shadow-yellow-300/50 transition-all duration-700 border border-yellow-200/30 transform hover:-translate-y-4 hover:rotate-2 hover:scale-105">
+                    <div className="relative overflow-hidden rounded-2xl">
+                      <Image
+                        src="/images/logo-in-home-4.jpg"
+                        alt="AOM Crash Course - Group B Officers Academy"
+                        width={400}
+                        height={350}
+                        className="w-full h-auto rounded-2xl group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
+                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                        <div className="bg-yellow-400/90 backdrop-blur-md rounded-xl px-3 py-2 shadow-lg">
+                          <span className="text-yellow-900 font-bold text-xs">🔥 CRASH COURSE</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Image 2 - AOM Aspirants Join Now */}
+                <div className="group relative animate-float-slow animation-delay-1000">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-3xl blur-2xl opacity-0 group-hover:opacity-40 transition-opacity duration-700"></div>
+                  <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-3 lg:p-2 shadow-2xl hover:shadow-blue-300/50 transition-all duration-700 border border-blue-200/30 transform hover:-translate-y-4 hover:-rotate-2 hover:scale-105">
+                    <div className="relative overflow-hidden rounded-2xl">
+                      <Image
+                        src="/images/logo-in-home-5.jpg"
+                        alt="AOM Aspirants - Join Our Zoom Classes"
+                        width={400}
+                        height={350}
+                        className="w-full h-auto rounded-2xl group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
+                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                        <div className="bg-blue-400/90 backdrop-blur-md rounded-xl px-3 py-2 shadow-lg">
+                          <span className="text-blue-900 font-bold text-xs">📚 ZOOM CLASSES</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Image 3 - AOM Crash Course Tree Design */}
+                <div className="group relative animate-float-slow animation-delay-2000">
+                  <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-500 rounded-3xl blur-2xl opacity-0 group-hover:opacity-40 transition-opacity duration-700"></div>
+                  <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-3 lg:p-2 shadow-2xl hover:shadow-green-300/50 transition-all duration-700 border border-green-200/30 transform hover:-translate-y-4 hover:rotate-1 hover:scale-105">
+                    <div className="relative overflow-hidden rounded-2xl">
+                      <Image
+                        src="/images/logo-in-home-6.jpg"
+                        alt="AOM Crash Course - Educational Journey"
+                        width={400}
+                        height={350}
+                        className="w-full h-auto rounded-2xl group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
+                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                        <div className="bg-green-400/90 backdrop-blur-md rounded-xl px-3 py-2 shadow-lg">
+                          <span className="text-green-900 font-bold text-xs">🌳 LEARNING TREE</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Image 4 - Saturday Spared Slot */}
+                <div className="group relative animate-float-slow animation-delay-3000">
+                  <div className="absolute inset-0 bg-gradient-to-r from-pink-400 to-rose-500 rounded-3xl blur-2xl opacity-0 group-hover:opacity-40 transition-opacity duration-700"></div>
+                  <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-3 lg:p-2 shadow-2xl hover:shadow-pink-300/50 transition-all duration-700 border border-pink-200/30 transform hover:-translate-y-4 hover:-rotate-1 hover:scale-105">
+                    <div className="relative overflow-hidden rounded-2xl">
+                      <Image
+                        src="/images/logo-in-home-7.jpg"
+                        alt="Saturday Spared Slot - Group B Officers Academy"
+                        width={400}
+                        height={350}
+                        className="w-full h-auto rounded-2xl group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-rose-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
+                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                        <div className="bg-pink-400/90 backdrop-blur-md rounded-xl px-3 py-2 shadow-lg">
+                          <span className="text-pink-900 font-bold text-xs">📅 SATURDAY SLOT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* AOM Aspirants Join Now Image */}
-              <div className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-3xl blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
-                <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-3 shadow-2xl hover:shadow-blue-300/50 transition-all duration-700 border border-blue-200/30 transform hover:-translate-y-3">
-                  <div className="relative overflow-hidden rounded-2xl">
-                    <Image
-                      src="/images/logo-in-home-5.jpg"
-                      alt="AOM Aspirants - Join Our Zoom Classes"
-                      width={500}
-                      height={400}
-                      className="w-full h-auto rounded-2xl group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
-                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                      <div className="bg-blue-400/90 backdrop-blur-md rounded-xl px-3 py-2 shadow-lg">
-                        <span className="text-blue-900 font-bold text-sm">📚 ZOOM CLASSES</span>
-                      </div>
-                    </div>
+              {/* Floating Action Text */}
+              <div className="mt-12 text-center">
+                <div className="relative inline-block">
+                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 rounded-2xl blur-xl opacity-30"></div>
+                  <div className="relative bg-white/20 backdrop-blur-xl rounded-2xl px-8 py-4 shadow-xl border border-white/30">
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                      🚀 Join Our AOM Crash Course Today!
+                    </h3>
+                    <p className="text-blue-100 font-medium">
+                      Interactive Zoom Classes • MCQ Practice • Mock Tests • Expert Guidance
+                    </p>
                   </div>
                 </div>
               </div>
