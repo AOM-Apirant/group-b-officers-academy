@@ -146,6 +146,34 @@ const Home = () => {
               </div>
             </div>
 
+            {/* Image 11 */}
+            <div className="group relative animate-fade-in-up animation-delay-600">
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-orange-500 rounded-3xl blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
+              <div className="relative bg-white rounded-3xl p-2 shadow-2xl hover:shadow-amber-300/50 transition-all duration-700 border border-amber-100 transform hover:-translate-y-4 hover:-rotate-1">
+                <div className="relative overflow-hidden rounded-2xl">
+                  <Image
+                    src="/images/logo-in-home-12.jpg"
+                    alt="Expert Guidance - Group B Officers Academy"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto rounded-2xl group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
+                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    <div className="bg-amber-400/90 backdrop-blur-md rounded-xl px-3 py-2 shadow-lg">
+                      <span className="text-amber-900 font-bold text-xs">� FUTURE</span>
+                    </div>
+                  </div>
+                  <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    <div className="bg-white/90 backdrop-blur-md rounded-xl p-3 shadow-lg">
+                      <h3 className="text-base font-bold text-gray-800 mb-1">Future Goals</h3>
+                      <p className="text-xs text-gray-600">Professional mentorship</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div className="group relative animate-fade-in-up animation-delay-600">
               <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-orange-500 rounded-3xl blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
               <div className="relative bg-white rounded-3xl p-2 shadow-2xl hover:shadow-amber-300/50 transition-all duration-700 border border-amber-100 transform hover:-translate-y-4 hover:-rotate-1">
@@ -173,34 +201,7 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Image 12 */}
-            <div className="group relative animate-fade-in-up animation-delay-800">
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-3xl blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-700"></div>
-              <div className="relative bg-white rounded-3xl p-2 shadow-2xl hover:shadow-cyan-300/50 transition-all duration-700 border border-cyan-100 transform hover:-translate-y-4 hover:rotate-1
-                lg:p-3 lg:min-h-[330px]">
-                <div className="relative overflow-hidden rounded-2xl">
-                  <Image
-                    src="/images/logo-in-home-12.jpg"
-                    alt="Future Goals - Group B Officers Academy"
-                    width={400}
-                    height={300}
-                    className="w-full h-auto rounded-2xl group-hover:scale-110 transition-transform duration-700 lg:min-h-[320px] lg:max-h-[340px] object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                    <div className="bg-cyan-400/90 backdrop-blur-md rounded-xl px-3 py-2 shadow-lg">
-                      <span className="text-cyan-900 font-bold text-xs">🚀 FUTURE</span>
-                    </div>
-                  </div>
-                  <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                    <div className="bg-white/90 backdrop-blur-md rounded-xl p-3 shadow-lg">
-                      <h3 className="text-base font-bold text-gray-800 mb-1">Future Goals</h3>
-                      <p className="text-xs text-gray-600">Achieving your dreams</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
           </div>
 
           {/* Bottom Quote */}

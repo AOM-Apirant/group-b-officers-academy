@@ -55,12 +55,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} ${poppins.variable} antialiased`}
+        className={`${poppins.className} ${poppins.variable} antialiased min-h-screen flex flex-col`}
         suppressHydrationWarning={true}
       >
         <ToastProvider>
           <Navbar />
-          {children}
+          <main className="flex-grow">
+            {children}
+          </main>
           <Footer />
         </ToastProvider>
       </body>

@@ -5,6 +5,41 @@ const SuperCrashCourse = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100 py-8 px-4">
       <div className="max-w-7xl mx-auto">
+        {/* Image Gallery Section */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
+            📸 Image Gallery
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-500 rounded-2xl transform rotate-2"></div>
+              <div className="relative bg-white rounded-2xl p-4 shadow-2xl">
+                <Image
+                  src="/images/logo-in-super.jpg"
+                  alt="AOM Super Crash Course - Image 1"
+                  width={500}
+                  height={600}
+                  className="rounded-xl"
+                  priority
+                />
+              </div>
+            </div>
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-2xl transform -rotate-2"></div>
+              <div className="relative bg-white rounded-2xl p-4 shadow-2xl">
+                <Image
+                  src="/images/logo-in-super-2.jpg"
+                  alt="AOM Super Crash Course - Image 2"
+                  width={500}
+                  height={600}
+                  className="rounded-xl"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content Section - Left Side */}
           <div className="space-y-8">
@@ -132,7 +167,7 @@ const SuperCrashCourse = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-500 rounded-2xl transform rotate-3"></div>
               <div className="relative bg-white rounded-2xl p-4 shadow-2xl">
                 <Image
-                  src="/images/logo-in-super.jpg"
+                  src="/images/logo-in-super-2.jpg"
                   alt="AOM Super Crash Course"
                   width={500}
                   height={600}

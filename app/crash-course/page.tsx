@@ -5,6 +5,53 @@ const CrashCourse = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-8 px-4">
       <div className="max-w-7xl mx-auto">
+        {/* Image Gallery Section */}
+        <div className="mb-12">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">📸 Image Gallery</h2>
+            <p className="text-gray-600">Course highlights and materials</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Original Image */}
+            <div className="relative group">
+              <div className="absolute w-full h-full top-0 left-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-2xl transform rotate-2 group-hover:rotate-0 transition-transform duration-300"></div>
+              <div className="relative bg-white rounded-2xl p-4 shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
+                <Image
+                  src="/images/logo-in-crash.jpg"
+                  alt="AOM Crash Course - Original"
+                  width={400}
+                  height={500}
+                  className="rounded-xl w-full h-auto"
+                />
+                <div className="mt-3 text-center">
+                  <p className="text-sm font-semibold text-gray-700">Course Overview</p>
+                </div>
+              </div>
+            </div>
+
+            {/* New Image */}
+            <div className="relative group">
+              <div className="absolute w-full h-full top-0 left-0 bg-gradient-to-r from-green-400 to-blue-500 rounded-2xl transform -rotate-2 group-hover:rotate-0 transition-transform duration-300"></div>
+              <div className="relative bg-white rounded-2xl p-4 shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
+                <Image
+                  src="/images/logo-in-crash-2.jpg"
+                  alt="AOM Crash Course - Details"
+                  width={400}
+                  height={500}
+                  className="rounded-xl w-full h-auto"
+                />
+                <div className="mt-3 text-center">
+                  <p className="text-sm font-semibold text-gray-700">Course Details</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Placeholder for future images */}
+            
+          </div>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-2 items-center">
           {/* Content Section - Left Side */}
           <div className="space-y-8">
