@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import { useToast } from '../../../components/Toast'
 
 const AdminLogin = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ const AdminLogin = () => {
   })
   const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
+  const { addToast } = useToast()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -38,7 +40,7 @@ const AdminLogin = () => {
           errorMessage = errorText || errorMessage
         }
         
-        alert(`Error: ${errorMessage}`)
+        addToast(`Error: ${errorMessage}`, 'error')
         return
       }
 
@@ -47,14 +49,14 @@ const AdminLogin = () => {
       if (result.success) {
         // Store admin session (in production, use proper session management)
         localStorage.setItem('adminSession', JSON.stringify(result.admin))
-        alert('Admin login successful!')
+        addToast('Admin login successful!', 'success')
         router.push('/admin/dashboard')
       } else {
-        alert(`Error: ${result.error}`)
+        addToast(`Error: ${result.error}`, 'error')
       }
     } catch (error) {
       console.error('Error during admin login:', error)
-      alert('Network error: Admin login failed. Please check your connection and try again.')
+      addToast('Network error: Admin login failed. Please check your connection and try again.', 'error')
     } finally {
       setIsLoading(false)
     }

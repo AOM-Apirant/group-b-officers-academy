@@ -1,7 +1,10 @@
 'use client'
 import React, { useState } from 'react'
+import Image from 'next/image'
+import { useToast } from '../../components/Toast'
 
 const Contact = () => {
+  const { addToast } = useToast()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,7 +27,7 @@ const Contact = () => {
       const result = await response.json()
 
       if (response.ok) {
-        alert('Thank you for your message! We will get back to you soon.')
+        addToast('Message sent successfully! We will get back to you soon.', 'success', 5000)
         // Reset form
         setFormData({
           name: '',
@@ -33,11 +36,11 @@ const Contact = () => {
           message: ''
         })
       } else {
-        alert(`Error: ${result.error}`)
+        addToast(`Error: ${result.error}`, 'error', 5000)
       }
     } catch (error) {
       console.error('Error submitting form:', error)
-      alert('Failed to send message. Please try again.')
+      addToast('Failed to send message. Please try again.', 'error', 5000)
     }
   }
 
@@ -264,6 +267,35 @@ const Contact = () => {
                     Send Message
                   </button>
                 </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Logo Section */}
+      <section className="py-16 bg-gradient-to-br from-amber-50 to-orange-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="relative inline-block">
+              <div className="absolute -inset-4 bg-gradient-to-r from-amber-200 to-orange-200 rounded-3xl blur-lg opacity-30"></div>
+              <div className="relative bg-white rounded-2xl p-8 shadow-2xl border border-amber-100">
+                <Image 
+                  src="/images/logo-in-contact.jpg" 
+                  alt="Group B Officers Academy Contact Information" 
+                  width={600}
+                  height={400}
+                  className="max-w-full h-auto rounded-xl shadow-lg"
+                  priority
+                />
+                <div className="mt-6">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                    Group B Officers Academy
+                  </h3>
+                  <p className="text-gray-600 text-lg">
+                    Your Gateway to Success
+                  </p>
+                </div>
               </div>
             </div>
           </div>

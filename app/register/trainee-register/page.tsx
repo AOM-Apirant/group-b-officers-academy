@@ -1,7 +1,9 @@
 'use client'
 import React, { useState } from 'react'
+import { useToast } from '../../../components/Toast'
 
 const TraineeRegister = () => {
+  const { addToast } = useToast()
   const [formData, setFormData] = useState({
     name: '',
     designation: '',
@@ -38,7 +40,7 @@ const TraineeRegister = () => {
       const result = await response.json()
 
       if (response.ok) {
-        alert('Registration completed successfully! We will review your application and get back to you soon.')
+        addToast('Trainee Registration sent successfully! We will review your application and get back to you soon.', 'success', 5000)
         // Reset form
         setFormData({
           name: '',
@@ -54,11 +56,11 @@ const TraineeRegister = () => {
           password: ''
         })
       } else {
-        alert(`Error: ${result.error}`)
+        addToast(`Error: ${result.error}`, 'error', 5000)
       }
     } catch (error) {
       console.error('Error submitting registration:', error)
-      alert('Failed to complete registration. Please try again.')
+      addToast('Failed to complete registration. Please try again.', 'error', 5000)
     }
   }
 
@@ -140,13 +142,14 @@ const TraineeRegister = () => {
             {/* Working Post */}
             <div className="group">
               <label className="block text-sm font-semibold text-gray-700 mb-2 group-hover:text-blue-600 transition-colors">
-                Working Post (Deputation if any)
+                Working Post (Deputation if any) <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
                 name="workingPost"
                 value={formData.workingPost}
                 onChange={handleChange}
+                required
                 className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-200 outline-none hover:border-gray-300"
                 placeholder="Enter working post or deputation details"
               />
@@ -155,12 +158,13 @@ const TraineeRegister = () => {
             {/* Preparing for */}
             <div className="group">
               <label className="block text-sm font-semibold text-gray-700 mb-2 group-hover:text-blue-600 transition-colors">
-                Preparing for the post
+                Preparing for the post <span className="text-red-500">*</span>
               </label>
               <select
                 name="preparingFor"
                 value={formData.preparingFor}
                 onChange={handleChange}
+                required
                 className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-200 outline-none hover:border-gray-300 bg-white cursor-pointer"
               >
                 <option value="">Select Post</option>
@@ -180,13 +184,14 @@ const TraineeRegister = () => {
               {/* Division */}
               <div className="group">
                 <label className="block text-sm font-semibold text-gray-700 mb-2 group-hover:text-blue-600 transition-colors">
-                  Division
+                  Division <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
                   name="division"
                   value={formData.division}
                   onChange={handleChange}
+                  required
                   className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-200 outline-none hover:border-gray-300"
                   placeholder="Division"
                 />
@@ -195,13 +200,14 @@ const TraineeRegister = () => {
               {/* Zone */}
               <div className="group">
                 <label className="block text-sm font-semibold text-gray-700 mb-2 group-hover:text-blue-600 transition-colors">
-                  Zone
+                  Zone <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
                   name="zone"
                   value={formData.zone}
                   onChange={handleChange}
+                  required
                   className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-200 outline-none hover:border-gray-300"
                   placeholder="Zone"
                 />
@@ -278,7 +284,7 @@ const TraineeRegister = () => {
                 type="submit"
                 className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-indigo-700 transform hover:scale-[1.02] transition-all duration-200 shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-300"
               >
-                Complete Registration
+                Trainee Registration
               </button>
             </div>
 
