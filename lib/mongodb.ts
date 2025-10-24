@@ -19,7 +19,9 @@ export async function connectToDatabase() {
     return { client, db };
   } catch (error) {
     console.error("Failed to connect to MongoDB:", error);
-    throw error;
+    // In production, you might want to throw the error
+    // For now, we'll allow the app to continue without database
+    throw new Error(`MongoDB connection failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
   }
 }
 

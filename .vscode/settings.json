@@ -1,13 +1,6 @@
 {
   "postman.settings.dotenv-detection-notification-visibility": false,
-  "editor.fontFamily": "Fira Code",
-  "editor.fontSize": 17,
-  "editor.lineHeight": 24,
-  "editor.tabSize": 4,
-  "editor.insertSpaces": true,
-  "editor.trimTrailingWhitespace": true,
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "always"
-  }
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontSize": 16,
+  "editor.lineHeight": 24
 }

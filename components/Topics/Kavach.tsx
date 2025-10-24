@@ -59,7 +59,7 @@ const Kavach = () => {
             </div>
 
             {/* Table of Contents */}
-            <div className="mx-auto max-w-2xl rounded-3xl shadow-2xl bg-gradient-to-br from-[#eef2ff] via-white to-[#f3f0ff] p-8 relative overflow-hidden">
+            <div className="mx-auto max-w-5xl rounded-3xl shadow-2xl bg-gradient-to-br from-[#eef2ff] via-white to-[#f3f0ff] p-8 relative overflow-hidden">
               {/* Decorative BG gradients */}
               <div className="absolute -top-16 -left-16 w-44 h-44 bg-blue-300/20 rounded-full blur-2xl pointer-events-none"></div>
               <div className="absolute -bottom-16 -right-16 w-56 h-56 bg-indigo-300/20 rounded-full blur-2xl pointer-events-none"></div>

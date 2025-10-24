@@ -25,9 +25,26 @@ const AdminLogin = () => {
         body: JSON.stringify(formData),
       })
 
+      // Check if response is ok before parsing JSON
+      if (!response.ok) {
+        const errorText = await response.text()
+        let errorMessage = 'Admin login failed. Please try again.'
+        
+        try {
+          const errorData = JSON.parse(errorText)
+          errorMessage = errorData.error || errorMessage
+        } catch {
+          // If JSON parsing fails, use the text response or default message
+          errorMessage = errorText || errorMessage
+        }
+        
+        alert(`Error: ${errorMessage}`)
+        return
+      }
+
       const result = await response.json()
 
-      if (response.ok) {
+      if (result.success) {
         // Store admin session (in production, use proper session management)
         localStorage.setItem('adminSession', JSON.stringify(result.admin))
         alert('Admin login successful!')
@@ -37,7 +54,7 @@ const AdminLogin = () => {
       }
     } catch (error) {
       console.error('Error during admin login:', error)
-      alert('Admin login failed. Please try again.')
+      alert('Network error: Admin login failed. Please check your connection and try again.')
     } finally {
       setIsLoading(false)
     }
