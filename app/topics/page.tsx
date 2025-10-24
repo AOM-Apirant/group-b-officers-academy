@@ -1,5 +1,5 @@
 import React from 'react'
-import Kavach from '../../components/Topics/Kavach'
+// import Kavach from '../../components/Topics/Kavach'
 
 const Topics = () => {
   return (
@@ -13,7 +13,7 @@ const Topics = () => {
           
 
           
-      <Kavach />
+      {/* <Kavach /> */}
           
         </div>
       </div>
