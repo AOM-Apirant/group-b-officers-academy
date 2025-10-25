@@ -40,7 +40,7 @@ const Navbar = () => {
                 height={40}
                 className="rounded-full"
               />
-              <span className="lg:text-xl text:lg font-bold text-blue-900">GROUP B OFFICERS ACADEMY</span>
+              <span className="lg:text-lg text-base font-bold text-blue-900">GROUP B OFFICERS ACADEMY</span>
             </Link>
           </div>
 
