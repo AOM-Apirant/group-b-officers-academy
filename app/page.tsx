@@ -469,28 +469,8 @@ const Home = () => {
               </div>
 
               {/* Floating Images Grid */}
-              <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-6">
-                {/* Image 1 - AOM Crash Course */}
-                <div className="group relative animate-float-slow">
-                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-3xl blur-2xl opacity-0 group-hover:opacity-40 transition-opacity duration-700"></div>
-                  <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-3 lg:p-2 shadow-2xl hover:shadow-yellow-300/50 transition-all duration-700 border border-yellow-200/30 transform hover:-translate-y-4 hover:rotate-2 hover:scale-105">
-                    <div className="relative overflow-hidden rounded-2xl">
-                      <Image
-                        src="/images/logo-in-home-4.jpg"
-                        alt="AOM Crash Course - Group B Officers Academy"
-                        width={400}
-                        height={350}
-                        className="w-full h-auto rounded-2xl group-hover:scale-110 transition-transform duration-700"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
-                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                        <div className="bg-yellow-400/90 backdrop-blur-md rounded-xl px-3 py-2 shadow-lg">
-                          <span className="text-yellow-900 font-bold text-xs">🔥 CRASH COURSE</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-6">
+                
 
                 {/* Image 2 - AOM Aspirants Join Now */}
                 <div className="group relative animate-float-slow animation-delay-1000">
