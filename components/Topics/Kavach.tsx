@@ -883,13 +883,13 @@ hot standby`
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-          <div className="flex justify-between items-center">
-            <h1 className="text-3xl font-bold text-gray-800">KAVACH 50 MCQ Quiz</h1>
+          <div className="flex justify-between items-center lg:flex-row flex-col gap-3">
+            <h1 className="lg:text-3xl text-xl font-bold text-gray-800">KAVACH 50 MCQ Quiz</h1>
             <div className="text-right">
-              <div className="text-2xl font-bold text-blue-600">{formatTime(timeLeft)}</div>
+              <div className="lg:text-2xl text-xl font-semibold text-blue-600 text-center">{formatTime(timeLeft)}</div>
               <div className="text-sm text-gray-600">Time Remaining</div>
             </div>
           </div>
@@ -931,15 +931,15 @@ hot standby`
               </div>
               <div className="mt-4 text-xs text-gray-600">
                 <div className="flex items-center gap-2 mb-1">
-                  <div className="w-3 h-3 bg-blue-600 rounded"></div>
+                  <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
                   <span>Current</span>
                 </div>
                 <div className="flex items-center gap-2 mb-1">
-                  <div className="w-3 h-3 bg-green-500 rounded"></div>
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                   <span>Answered</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-gray-200 rounded"></div>
+                  <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
                   <span>Not Answered</span>
                 </div>
               </div>
@@ -948,11 +948,11 @@ hot standby`
 
           {/* Main Question Area */}
           <div className="lg:col-span-3">
-            <div className="bg-white rounded-lg shadow-md p-6">
+            <div className="bg-white rounded-lg shadow-md p-3 lg:p-6">
               {questions[currentQuestion] && (
                 <>
                   <div className="mb-6">
-                    <h2 className="text-xl font-semibold text-gray-800 mb-4">
+                    <h2 className="lg:text-xl text-base font-semibold text-gray-800 mb-4">
                       {questions[currentQuestion].question}
                     </h2>
                     
@@ -960,7 +960,7 @@ hot standby`
                       {questions[currentQuestion].options.map((option, index) => (
                         <label
                           key={index}
-                          className={`block p-4 rounded-lg border-2 cursor-pointer transition-all ${
+                          className={`block lg:p-4 p-2 rounded-lg border-2 cursor-pointer transition-all ${
                             selectedAnswer === index
                               ? showResult
                                 ? isCorrect
@@ -1020,7 +1020,7 @@ hot standby`
                     <button
                       onClick={handlePrevious}
                       disabled={currentQuestion === 0}
-                      className="px-6 py-2 bg-gray-500 text-white rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-600 transition-colors"
+                      className="px-6 py-2 bg-gray-500 text-white rounded-md disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-600 transition-colors"
                     >
                       Previous
                     </button>

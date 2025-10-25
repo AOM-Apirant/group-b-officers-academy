@@ -37,8 +37,8 @@ export async function POST(request: NextRequest) {
 
     // Check admin credentials (in production, use environment variables)
     const adminCredentials = {
-      username: process.env.ADMIN_USERNAME || "admin",
-      password: process.env.ADMIN_PASSWORD || "admin123",
+      username: process.env.ADMIN_USERNAME || "adminaom",
+      password: process.env.ADMIN_PASSWORD || "admin123aom",
     };
 
     // Log for debugging (remove in production)

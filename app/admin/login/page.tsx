@@ -151,23 +151,7 @@ const AdminLogin = () => {
             </p>
           </div>
         </div>
-
-        {/* Admin Info */}
-        <div className="bg-white rounded-xl p-6 shadow-lg">
-          <div className="text-center">
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Admin Access
-            </h3>
-            <p className="text-gray-600 mb-4">
-              Manage contact messages, user registrations, and system settings
-            </p>
-            <div className="text-sm text-gray-500">
-              <p>Default credentials:</p>
-              <p>Username: admin</p>
-              <p>Password: admin123</p>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   )
