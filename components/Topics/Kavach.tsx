@@ -1052,14 +1052,14 @@ hot standby`
         {(quizCompleted || timeLeft === 0) && showSummary && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 overflow-y-auto">
             <div className="bg-white rounded-lg p-8 max-w-4xl w-full mx-4 my-8 max-h-[90vh] overflow-y-auto">
-              <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">KAVACH Quiz Summary & Overview</h2>
+              <h2 className="lg:text-3xl text-xl font-bold text-center mb-6 text-gray-800">KAVACH Quiz Summary & Overview</h2>
               
               {/* Overall Score */}
               <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-6 mb-6 text-white">
                 <div className="text-center">
-                  <div className="text-5xl font-bold mb-2">{correctCount}/{totalQuestions}</div>
-                  <div className="text-xl mb-2">Your Score</div>
-                  <div className="text-3xl font-bold">{percentage}%</div>
+                  <div className="lg:text-5xl text-2xl font-bold mb-2">{correctCount}/{totalQuestions}</div>
+                  <div className="lg:text-xl text-base mb-2">Your Score</div>
+                  <div className="lg:text-3xl text-xl font-bold">{percentage}%</div>
                   <div className="text-sm mt-2">Time Spent: {timeSpentMinutes}m {timeSpentSeconds}s</div>
                 </div>
               </div>
@@ -1067,22 +1067,22 @@ hot standby`
               {/* Performance Analysis */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                 <div className="bg-green-50 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-green-600">{correctCount}</div>
+                  <div className="lg:text-2xl text-xl font-bold text-green-600">{correctCount}</div>
                   <div className="text-green-700">Correct Answers</div>
                 </div>
                 <div className="bg-red-50 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-red-600">{incorrectCount}</div>
+                  <div className="lg:text-2xl text-xl font-bold text-red-600">{incorrectCount}</div>
                   <div className="text-red-700">Incorrect Answers</div>
                 </div>
                 <div className="bg-blue-50 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-blue-600">{totalQuestions - answeredCount}</div>
+                  <div className="lg:text-2xl text-xl font-bold text-blue-600">{totalQuestions - answeredCount}</div>
                   <div className="text-blue-700">Unanswered</div>
                 </div>
               </div>
 
               {/* Category-wise Performance */}
               <div className="mb-6">
-                <h3 className="text-xl font-semibold mb-4 text-gray-800">Category-wise Performance</h3>
+                <h3 className="lg:text-xl text-base font-semibold mb-4 text-gray-800">Category-wise Performance</h3>
                 <div className="space-y-3">
                   {Object.entries(categoryPerformance).map(([category, data]) => {
                     const categoryPercentage = Math.round((data.correct / data.total) * 100)
@@ -1110,7 +1110,7 @@ hot standby`
 
               {/* Question Review */}
               <div className="mb-6">
-                <h3 className="text-xl font-semibold mb-4 text-gray-800">Question Review</h3>
+                <h3 className="lg:text-xl text-base font-semibold mb-4 text-gray-800">Question Review</h3>
                 <div className="max-h-60 overflow-y-auto">
                   <div className="grid grid-cols-5 gap-2">
                     {questions.map((question, index) => {
